@@ -4,9 +4,9 @@
 
 > A windows package manager
 
-## What is Ruche ?
+## What is ruche ?
 
-Ruche is designed to help Windows developers to work.
+ruche is designed to help Windows developers to work.
 
 ## Usage
 
