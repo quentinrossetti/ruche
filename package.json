@@ -1,7 +1,7 @@
 {
   "name": "ruche",
   "version": "0.0.0",
-  "description": "A windows package manager",
+  "description": "A Windows developer's best friend",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha"

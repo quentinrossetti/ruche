@@ -2,11 +2,12 @@
 
 [![Dependencies Status][david-image]][david-url] [![Build Status][travis-image]][travis-url]
 
-> A windows package manager
+> A Windows developer's best friend
 
 ## What is ruche ?
 
-ruche is designed to help Windows developers to work.
+ruche is designed to help Windows developers to work. It take care of software 
+installation, updates, and alternatives versions switching.
 
 ## Usage
 
