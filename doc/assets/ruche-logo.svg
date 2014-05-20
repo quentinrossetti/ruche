@@ -4,20 +4,6 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="567.25px" height="121.505px" viewBox="0 0 567.25 121.505" enable-background="new 0 0 567.25 121.505"
 	 xml:space="preserve">
-<g id="bg-big" display="none">
-	<polygon display="inline" fill="#FFCF1E" points="193,72.441 168,87.129 143,72.441 143,43.064 168,28.376 193,43.064 	"/>
-	<polygon display="inline" fill="#FFCF1E" points="250,72.441 225,87.129 200,72.441 200,43.064 225,28.376 250,43.064 	"/>
-	<polygon display="inline" fill="#FFCF1E" points="307,72.441 282,87.129 257,72.441 257,43.064 282,28.376 307,43.064 	"/>
-	<polygon display="inline" fill="#FFCF1E" points="364,72.441 339,87.129 314,72.441 314,43.064 339,28.376 364,43.064 	"/>
-	<polygon display="inline" fill="#FFCF1E" points="396,28.376 371,43.064 371,72.441 396,87.129 421,72.441 421,43.064 	"/>
-</g>
-<g id="bg-small" display="none" opacity="0.7">
-	<polygon display="inline" fill="#FCEE21" points="416,70.503 396,82.253 376,70.503 376,47.002 396,35.251 416,47.002 	"/>
-	<polygon display="inline" fill="#FCEE21" points="188,69.503 168,81.253 148,69.503 148,46.002 168,34.251 188,46.002 	"/>
-	<polygon display="inline" fill="#FCEE21" points="245,69.503 225,81.253 205,69.503 205,46.002 225,34.251 245,46.002 	"/>
-	<polygon display="inline" fill="#FCEE21" points="302,69.503 282,81.253 262,69.503 262,46.002 282,34.251 302,46.002 	"/>
-	<polygon display="inline" fill="#FCEE21" points="359,69.503 339,81.253 319,69.503 319,46.002 339,34.251 359,46.002 	"/>
-</g>
 <g id="char-bee">
 	<polygon fill="#FFCF1E" points="101.25,35.314 111.25,29.407 55.625,0.016 0,29.376 0,87.752 10,82.253 10,35.752 55.625,11.75 	
 		"/>
