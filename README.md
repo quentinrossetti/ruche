@@ -1,4 +1,4 @@
-[![ruche logo](https://github.com/quentinrossetti/ruche/doc/assets/ruche-logo.png)](https://github.com/quentinrossetti/ruche)
+[![ruche logo](https://github.com/quentinrossetti/ruche/blob/master/doc/assets/ruche-logo.png)](https://github.com/quentinrossetti/ruche)
 
 A windows package manager
 
