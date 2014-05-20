@@ -1,4 +1,4 @@
-[![ruche logo](https://raw.githubusercontent.com/quentinrossetti/ruche/master/doc/assets/ruche-logo.svg)](https://github.com/quentinrossetti/ruche)
+[![ruche logo](https://raw.githubusercontent.com/quentinrossetti/ruche/master/doc/assets/ruche-logo.png)](https://github.com/quentinrossetti/ruche)
 
 [![Dependencies Status][david-image]][david-url] [![Build Status][travis-image]][travis-url]
 
