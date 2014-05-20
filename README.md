@@ -2,7 +2,7 @@
 
 [![Dependencies Status][gemnasium-image]][gemnasium-url] [![Build Status][travis-image]][travis-url]
 
-A windows package manager
+> A windows package manager
 
 ## What is Ruche ?
 
