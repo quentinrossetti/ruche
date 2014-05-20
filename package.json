@@ -1,0 +1,27 @@
+{
+  "name": "ruche",
+  "version": "0.0.0",
+  "description": "A windows package manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quentinrossetti/ruche.git"
+  },
+  "keywords": [
+    "windows",
+    "package",
+    "manager"
+  ],
+  "author": "Quentin Rossetti <quentin.rossetti@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/quentinrossetti/ruche/issues"
+  },
+  "homepage": "https://github.com/quentinrossetti/ruche",
+  "devDependencies": {
+    "mocha": "^1.19.0"
+  }
+}
