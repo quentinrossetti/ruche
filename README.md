@@ -1,6 +1,6 @@
 [![ruche logo][ruche-image]][ruche-url]
 
-[![Dependencies Status][dependencies-image]][dependencies-url] [![Dev Dependencies Status][dependencies-dev-image]][dependencies-dev-url] [![Build Status][travis-image]][travis-url]
+[![Dependencies Status][gemnasium-image]][gemnasium-url] [![Build Status][travis-image]][travis-url]
 
 > A windows package manager
 
@@ -17,10 +17,8 @@ ruche alternatives <package>
 ```
 
 [ruche-url]: https://github.com/quentinrossetti/ruche
-[ruche-logo]:raw.githubusercontent.com/quentinrossetti/ruche/master/doc/assets/ruche-logo.png
-[dependencies-image]: https://david-dm.org/quentinrossetti/ruche.png
-[dependencies-url]: https://david-dm.org/quentinrossetti/ruche
-[dependencies-dev-image]: https://david-dm.org/quentinrossetti/ruche/dev-status.png
-[dependencies-dev-url]: https://david-dm.org/quentinrossetti/ruche#info=devDependencies
+[ruche-image]:raw.githubusercontent.com/quentinrossetti/ruche/master/doc/assets/ruche-logo.png
+[gemnasium-url]: https://gemnasium.org/quentinrossetti/ruche
+[gemnasium-image]: http://img.shields.io/gemnasium/quentinrossetti/ruche.svg
 [travis-url]: https://travis-ci.org/quentinrossetti/ruche
 [travis-image]: http://img.shields.io/travis/quentinrossetti/ruche.svg
