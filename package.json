@@ -23,5 +23,8 @@
   "homepage": "https://github.com/quentinrossetti/ruche",
   "devDependencies": {
     "mocha": "^1.19.0"
+  },
+  "dependencies": {
+    "rc": "^0.3.5"
   }
 }
