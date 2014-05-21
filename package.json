@@ -4,8 +4,13 @@
   "description": "A Windows developer's best friend",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --recursive --reporter spec",
+    "start": "./bin/ruche.js"
   },
+  "bin": {
+    "ruche": "./bin/ruche.js"
+  },
+  "preferGlobal": "true",
   "repository": {
     "type": "git",
     "url": "https://github.com/quentinrossetti/ruche.git"
@@ -21,12 +26,16 @@
     "url": "https://github.com/quentinrossetti/ruche/issues"
   },
   "homepage": "https://github.com/quentinrossetti/ruche",
-  "devDependencies": {
-    "mocha": "^1.19.0"
-  },
   "dependencies": {
     "rc": "^0.3.5",
-    "cli": "^0.6.2",
-    "yargs": "^1.2.2"
+    "yargs": "^1.2.2",
+    "underscore": "^1.6.0",
+    "colors": "^0.6.2"
+  },
+  "devDependencies": {
+    "mocha": "^1.19.0",
+    "debug": "^0.8.1",
+    "chai": "^1.9.1",
+    "minimist": "^0.1.0"
   }
 }

@@ -6,8 +6,8 @@
 
 ## What is ruche ?
 
-ruche is designed to help Windows developers to work. It take care of software 
-installation, updates, and alternatives versions switching.
+ruche is designed to help Windows developers to work. It takes care of software 
+installations, updates, and alternatives versions switching.
 
 ## Usage
 
