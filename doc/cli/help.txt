@@ -1,0 +1,26 @@
+Usage: ruche [options] [commands [package]]
+
+Description:
+
+  A Windows developer's best friend.
+
+Commands:
+
+  install <package>         install a new package
+  uninstall <package>       remove a package
+  alternatives <package>    allow you to chose between versions of a same 
+                            sofware. 
+
+Options:
+
+  -h, --help                output usage information
+  -v, --version             output the version number
+  -V, --verbose             display all the logs
+  -q, --quiet               do not show warnings
+  -s, --silent              show nothing
+
+Environment variables:
+
+  RUCHE                     default installation directory
+  RUCHE_VAR                 where ruche puts databases, logs, pids and www
+  RUCHE_TOOLS               where ruche puts softwares

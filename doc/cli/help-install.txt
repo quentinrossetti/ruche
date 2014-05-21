@@ -1,0 +1,9 @@
+Usage: ruche [options] install commands <package>
+
+Description:
+
+  Install a new package.
+
+Options:
+
+  -n, --no-path             do not register the package to th e %PATH%
