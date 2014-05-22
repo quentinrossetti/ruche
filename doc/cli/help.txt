@@ -16,8 +16,7 @@ Options:
   -h, --help                output usage information
   -v, --version             output the version number
   -V, --verbose             display all the logs
-  -q, --quiet               do not show warnings
-  -s, --silent              show nothing
+  -q, --quiet               do not show anything
 
 Environment variables:
 
