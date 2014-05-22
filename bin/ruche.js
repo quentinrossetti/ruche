@@ -1,8 +1,15 @@
 #!/usr/bin/env node
 
 // Module dependencies.
-var argv = require('minimist')(process.argv.slice(2));
+var argv = require('yargs')
+  .alias('v', 'version')
+  .alias('h', 'help')
+  .alias('V', 'verbose')
+  .alias('q', 'quiet')
+  .alias('k', 'keep')
+  .boolean(['version', 'help', 'verbose', 'quiet', 'keep'])
+  .argv;
 var cli = require('../lib/cli');
 
 // Run the command-line client.
-cli.argv(argv);
+cli(argv);
