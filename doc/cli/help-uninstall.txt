@@ -1,0 +1,10 @@
+Usage: ruche [options] uninstall <package>
+
+Description:
+
+  Remove a package.
+
+Options:
+
+  -k, --keep                Remove only the package from the %PATH%. All other 
+                            files are kept on the hard-drive.

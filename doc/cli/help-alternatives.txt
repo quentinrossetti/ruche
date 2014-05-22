@@ -1,0 +1,5 @@
+Usage: ruche [options] alternatives <package>
+
+Description:
+
+  Allow you to chose between versions of a same sofware.
