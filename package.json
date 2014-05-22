@@ -8,7 +8,8 @@
     "start": "./bin/ruche.js"
   },
   "bin": {
-    "ruche": "./bin/ruche.js"
+    "ruche": "./bin/ruche.js",
+    "repl": "./bin/repl.js"
   },
   "preferGlobal": "true",
   "repository": {
