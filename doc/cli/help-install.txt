@@ -1,4 +1,4 @@
-Usage: ruche [options] install commands <package>
+Usage: ruche [options] install <package>
 
 Description:
 
