@@ -1,4 +1,4 @@
-Usage: ruche [options] [commands [package]]
+Usage: ruche [options] [commands <package>]
 
 Description:
 

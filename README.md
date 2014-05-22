@@ -24,7 +24,7 @@ var ruche = require('ruche');
 ruche.install('git');
 ```
 
-Or with the REPL
+Or with the REPL:
 ```bat
 ruche-repl
 ruche> ruche.version();
