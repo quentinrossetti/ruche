@@ -11,10 +11,23 @@ installations, updates, and alternatives versions switching.
 
 ## Usage
 
+You can use ruche in a terminal:
 ```bat
 ruche install <package>
 ruche uninstall <package>
 ruche alternatives <package>
+```
+
+As a node module:
+```js
+var ruche = require('ruche');
+ruche.install('git');
+```
+
+Or with the REPL
+```bat
+ruche-repl
+ruche> ruche.version();
 ```
 
 [ruche-url]: https://github.com/quentinrossetti/ruche
