@@ -28,6 +28,7 @@ Or with the REPL:
 ```bat
 ruche-repl
 ruche> ruche.version();
+ruche> version(); # Works too!
 ```
 
 [ruche-url]: https://github.com/quentinrossetti/ruche

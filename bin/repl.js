@@ -10,3 +10,6 @@ var emitter = require('../lib/ruche/util/emitter');
 var prompt = repl.start({ prompt: 'ruche> ' });
 prompt.context.ruche = ruche;
 prompt.context.ruche.emitter = emitter;
+prompt.context.help = ruche.help;
+prompt.context.version = ruche.version;
+prompt.context.install = ruche.install;
