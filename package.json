@@ -9,7 +9,7 @@
   },
   "bin": {
     "ruche": "./bin/ruche.js",
-    "ruche-repl": "./bin/ruche-repl.js"
+    "ruche-repl": "./bin/repl.js"
   },
   "preferGlobal": "true",
   "repository": {
