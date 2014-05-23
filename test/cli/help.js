@@ -2,7 +2,7 @@
 var debug = require('debug')('ruche:test:cli:help');
 var expect = require('chai').expect;
 var cli = require('../../lib/cli');
-var fake = require('./fake');
+var fake = require('./util/fake');
 
 /**
  * Test suite for cli:help
