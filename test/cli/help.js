@@ -4,27 +4,38 @@ var expect = require('chai').expect;
 var cli = require('../../lib/cli');
 var fake = require('./fake');
 
-// Test suite
+/**
+ * Test suite for cli:help
+ *
+ * Compare the results of `cli.argv(command)` against expected scenarios. 
+ */
 describe('cli:help', function() {
   
-  it('An -h option should produce an `help` context', function() {
-    var argv = fake.argv('-h');
+  it('--help should produce `help` context', function() {
+    var argv = fake.argv('ruche --help');;
     expect(cli.argv(argv).context).to.equal('help');
   });
-  it('An --help option should produce an `help` context', function() {
-    var argv = fake.argv('--help');;
+
+  it('-h should produce `help` context', function() {
+    var argv = fake.argv('ruche -h');
     expect(cli.argv(argv).context).to.equal('help');
   });
-  it('With no command specified `help` should be set to `global`', function() {
-    var argv = fake.argv('--help');
+  
+  it('No command should produce `help` context and `global` help', function() {
+    var argv = fake.argv('ruche');
+    expect(cli.argv(argv).context).to.equal('help');
     expect(cli.argv(argv).help).to.equal('global');
   });
-  it('With an unknown command `help` is set to `global`', function() {
-    var argv = fake.argv('makemecoffee');
+
+  it('Unknown command should produce `help` context and `global` help', function() {
+    var argv = fake.argv('ruche makemecoffee');
+    expect(cli.argv(argv).context).to.equal('help');
     expect(cli.argv(argv).help).to.equal('global');
   });
-  it('With an known command `help` is set to `command`', function() {
-    var argv = fake.argv('install -h');
+
+  it('Known command should produce `command` according to the command', function() {
+    var argv = fake.argv('ruche install -h');
+    expect(cli.argv(argv).context).to.equal('help');
     expect(cli.argv(argv).help).to.equal('install');
   });
 
