@@ -1,0 +1,18 @@
+[
+  {
+    "package": "curl",
+    "version": "7.36.0",
+    "platefrom": "win32",
+    "homepage": "http://www.confusedbycode.com/curl/",
+    "link": "http://www.confusedbycode.com/curl/curl-7.36.0-win32-fix1.zip",
+    "script": "plainzip"
+  },
+  {
+    "package": "curl",
+    "version": "7.36.0",
+    "platefrom": "win32",
+    "homepage": "http://www.confusedbycode.com/curl/",
+    "link": "http://www.confusedbycode.com/curl/curl-7.36.0-win64-fix1.zip",
+    "script": "plainzip"
+  }
+]
