@@ -12,13 +12,15 @@ var fake = require('./util/fake');
 describe('cli:version', function() {
   
   it('--version should produce `version` context', function() {
-    var argv = fake.argv('ruche --version');;
-    expect(cli.argv(argv).context).to.equal('version');
+    var argv = fake.argv('ruche --version');
+    var result = cli.argv(argv);
+    expect(result.context).to.equal('version');
   });
 
   it('-v should produce `version` context', function() {
     var argv = fake.argv('ruche -v');
-    expect(cli.argv(argv).context).to.equal('version');
+    var result = cli.argv(argv);
+    expect(result.context).to.equal('version');
   });
   
 });

@@ -12,31 +12,36 @@ var fake = require('./util/fake');
 describe('cli:help', function() {
   
   it('--help should produce `help` context', function() {
-    var argv = fake.argv('ruche --help');;
-    expect(cli.argv(argv).context).to.equal('help');
+    var argv = fake.argv('ruche --help');
+    var result = cli.argv(argv);
+    expect(result.context).to.equal('help');
   });
 
   it('-h should produce `help` context', function() {
     var argv = fake.argv('ruche -h');
-    expect(cli.argv(argv).context).to.equal('help');
+    var result = cli.argv(argv);
+    expect(result.context).to.equal('help');
   });
   
   it('No command should produce `help` context and `global` help', function() {
     var argv = fake.argv('ruche');
-    expect(cli.argv(argv).context).to.equal('help');
-    expect(cli.argv(argv).help).to.equal('global');
+    var result = cli.argv(argv);
+    expect(result.context).to.equal('help');
+    expect(result.help).to.equal('global');
   });
 
   it('Unknown command should produce `help` context and `global` help', function() {
     var argv = fake.argv('ruche makemecoffee');
-    expect(cli.argv(argv).context).to.equal('help');
-    expect(cli.argv(argv).help).to.equal('global');
+    var result = cli.argv(argv);
+    expect(result.context).to.equal('help');
+    expect(result.help).to.equal('global');
   });
 
   it('Known command should produce `command` according to the command', function() {
     var argv = fake.argv('ruche install -h');
-    expect(cli.argv(argv).context).to.equal('help');
-    expect(cli.argv(argv).help).to.equal('install');
+    var result = cli.argv(argv);
+    expect(result.context).to.equal('help');
+    expect(result.help).to.equal('install');
   });
 
 });
