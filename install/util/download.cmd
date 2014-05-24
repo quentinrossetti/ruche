@@ -30,7 +30,8 @@ function download(url, dest) {
 
 with (WScript.Arguments) {
   try {
-    var url = Unnamed(0), dest = Unnamed(1);
+    var url = Unnamed(0);
+    var dest = Unnamed(1);
     download(url, dest);
   }
   catch (e) {

@@ -23,7 +23,8 @@ function unzip(zip, dest) {
 
 with (WScript.Arguments) {
   try {
-    var zip = Unnamed(0), dest = Unnamed(1);
+    var zip = Unnamed(0);
+    var dest = Unnamed(1);
     unzip(zip, dest);
   }
   catch (e) {
