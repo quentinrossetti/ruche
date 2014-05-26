@@ -12,7 +12,7 @@ exit /b
 
 function download(url, dest) {
   var objXMLHTTP = new ActiveXObject("MSXML2.XMLHTTP");
-  objXMLHTTP.onreadystatechange=function() {
+  objXMLHTTP.onreadystatechange = function () {
     if (objXMLHTTP.readyState === 4) {
       var objADOStream = new ActiveXObject("ADODB.Stream");
       objADOStream.open();

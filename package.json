@@ -1,6 +1,6 @@
 {
   "name": "ruche",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A Windows developer's best friend",
   "main": "lib/index.js",
   "scripts": {
@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/quentinrossetti/ruche",
   "dependencies": {
-    "rc": "^0.3.5",
+    "rc": "^0.4.0",
     "yargs": "^1.2.2",
     "underscore": "^1.6.0",
     "colors": "^0.6.2",
