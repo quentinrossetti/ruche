@@ -3,54 +3,60 @@
     "package": "7zip",
     "version": "9.20",
     "platform": "win32",
-    "link": "http://localhost:42001/packages/7zip/7zip-9.20-win32.tar",
-    "format": "tar",
-    "script": "7zip1",
+    "link": "http://localhost:42001/packages/7zip/7zip-9.20-win32.tar.gz",
+    "bin": {
+      "7z": "7z.exe"
+    },
     "homepage": "http://www.7-zip.org/"
   },
   {
     "package": "7zip",
     "version": "9.20",
     "platform": "win64",
-    "link": "http://localhost:42001/packages/7zip/7zip-9.20-win64.tar",
-    "format": "tar",
-    "script": "7zip1",
+    "link": "http://localhost:42001/packages/7zip/7zip-9.20-win64.tar.gz",
+    "bin": {
+      "7z": "7z.exe"
+    },
     "homepage": "http://www.7-zip.org/"
   },
   {
     "package": "7zip",
     "version": "9.21",
     "platform": "win32",
-    "link": "http://localhost:42001/packages/7zip/7zip-9.21-win32.tar",
-    "format": "tar",
-    "script": "7zip1",
+    "link": "http://localhost:42001/packages/7zip/7zip-9.21-win32.tar.gz",
+    "bin": {
+      "7z": "7z.exe"
+    },
     "homepage": "http://www.7-zip.org/"
   },
   {
     "package": "7zip",
     "version": "9.21",
     "platform": "win64",
-    "link": "http://localhost:42001/packages/7zip/7zip-9.21-win64.tar",
-    "format": "tar",
-    "script": "7zip1",
+    "link": "http://localhost:42001/packages/7zip/7zip-9.21-win64.tar.gz",
+    "bin": {
+      "7z": "7z.exe"
+    },
     "homepage": "http://www.7-zip.org/"
   },
   {
     "package": "7zip",
     "version": "9.22",
     "platform": "win32",
-    "link": "http://localhost:42001/packages/7zip/7zip-9.22-win32.tar",
-    "format": "tar",
-    "script": "7zip1",
+    "link": "http://localhost:42001/packages/7zip/7zip-9.22-win32.tar.gz",
+    "bin": {
+      "7z": "7z.exe"
+    },
     "homepage": "http://www.7-zip.org/"
   },
   {
     "package": "7zip",
     "version": "9.22",
     "platform": "win64",
-    "link": "http://localhost:42001/packages/7zip/7zip-9.22-win64.tar",
-    "format": "tar",
-    "script": "7zip1",
+    "link": "http://localhost:42001/packages/7zip/7zip-9.22-win64.tar.gz",
+    "bin": {
+      "7z": "7z.exe"
+    },
     "homepage": "http://www.7-zip.org/"
   }
 ]

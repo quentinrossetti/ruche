@@ -3,36 +3,40 @@
     "package": "curl",
     "version": "7.36.0",
     "platform": "win32",
-    "link": "https://raw.githubusercontent.com/quentinrossetti/ruche/raw/gh-pages/packages/curl/curl-7.36.0-win32.tar",
-    "format": "tar",
-    "script": "plainzip",
+    "link": "http://localhost:42001/packages/curl/curl-7.36.0-win32.tar.gz",
+    "bin": {
+      "curl": "bin/curl.exe"
+    },
     "homepage": "http://www.confusedbycode.com/curl/"
   },
   {
     "package": "curl",
     "version": "7.36.0",
     "platform": "win64",
-    "link": "https://raw.githubusercontent.com/quentinrossetti/ruche/blob/gh-pages/packages/curl/curl-7.36.0-win64.tar",
-    "format": "tar",
-    "script": "plainzip",
+    "link": "http://localhost:42001/packages/curl/curl-7.36.0-win64.tar.gz",
+    "bin": {
+      "curl": "bin/curl.exe"
+    },
     "homepage": "http://www.confusedbycode.com/curl/"
   },
   {
     "package": "curl",
     "version": "7.37.0",
     "platform": "win32",
-    "link": "https://raw.githubusercontent.com/quentinrossetti/ruche/blob/gh-pages/packages/curl/curl-7.37.0-win32.tar",
-    "format": "tar",
-    "script": "plainzip",
+    "link": "http://localhost:42001/packages/curl/curl-7.37.0-win32.tar.gz",
+    "bin": {
+      "curl": "bin/curl.exe"
+    },
     "homepage": "http://www.confusedbycode.com/curl/"
   },
   {
     "package": "curl",
     "version": "7.37.0",
     "platform": "win64",
-    "link": "https://raw.githubusercontent.com/quentinrossetti/ruche/gh-pages/packages/curl/curl-7.37.0-win64.tar",
-    "format": "tar",
-    "script": "plainzip",
+    "link": "http://localhost:42001/packages/curl/curl-7.37.0-win64.tar.gz",
+    "bin": {
+      "curl": "bin/curl.exe"
+    },
     "homepage": "http://www.confusedbycode.com/curl/"
   }
 ]
