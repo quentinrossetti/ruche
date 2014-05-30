@@ -1,3 +1,4 @@
-* install more than one package at a time
+* install feedback (cli)
 * uninstall command
+* alternatives command
 * installer for ruche!

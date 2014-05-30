@@ -1,6 +1,9 @@
 #!/usr/bin/env node
-
 // Module dependencies.
+var _ = require('underscore');
+if (_.contains(process.argv, '--verbose') || _.contains(process.argv, '-V')) {
+  process.env.DEBUG = 'ruche*';
+}
 var debug = require('debug')('ruche:bin');
 var cli = require('../lib/cli');
 
