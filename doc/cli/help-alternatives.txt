@@ -1,5 +1,9 @@
-Usage: ruche [options] alternatives <package>
+Usage: ruche alternatives <package>
 
 Description:
 
   Allow you to chose between versions of a same sofware.
+
+Options:
+
+  -c, --choice              specify an alternative. This skip the prompt

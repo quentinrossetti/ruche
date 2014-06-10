@@ -1,6 +1,7 @@
 - [x] install feedback (cli)
 - [x] uninstall command
-- [ ] alternatives command
+- [x] alternatives command
 - [ ] installer for ruche!
 - [ ] write wiki for install, usage and packaging
 - [ ] use the cache for packages install
+- [ ] autocomplete

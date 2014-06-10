@@ -14,3 +14,4 @@ prompt.context.help = ruche.help;
 prompt.context.version = ruche.version;
 prompt.context.install = ruche.install;
 prompt.context.uninstall = ruche.uninstall;
+prompt.context.alternatives = ruche.alternatives;
