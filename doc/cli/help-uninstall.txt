@@ -1,10 +1,7 @@
-Usage: ruche [options] uninstall <package>
+Usage: ruche [options] uninstall <package[-version-platform]>
 
 Description:
 
-  Remove a package.
-
-Options:
-
-  -k, --keep                Remove only the package from the %PATH%. All other 
-                            files are kept on the hard-drive.
+  Remove a package. For uninstalling serveral packages in one command split 
+  them with a space: ruche install curl 7zip. You also cant specify a 
+  particular version and platform of a package: ruche install 7zip-9.20-win64
