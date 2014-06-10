@@ -30,5 +30,13 @@ describe('cli:alternatives', function () {
     expect(result.context).to.equal('help');
     expect(result.help).to.equal('alternatives');
   });
+
+  it('could be called with --choice option', function () {
+    var argv = fake.argv('ruche alternatives package --choice package-1-win32');
+    var result = cli.argv(argv);
+    expect(result.context).to.equal('alternatives');
+    expect(result.package).to.equal('package');
+    expect(result.choice).to.equal('package-1-win32');
+  });
   
 });
