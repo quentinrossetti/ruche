@@ -17,8 +17,8 @@ describe('cli:version', function() {
     expect(result.context).to.equal('version');
   });
 
-  it('-v should produce `version` context', function() {
-    var argv = fake.argv('ruche -v');
+  it('-V should produce `version` context', function() {
+    var argv = fake.argv('ruche -V');
     var result = cli.argv(argv);
     expect(result.context).to.equal('version');
   });

@@ -21,7 +21,7 @@ ruche alternatives <package>
 As a node module:
 ```js
 var ruche = require('ruche');
-ruche.install('git');
+ruche.install(['git']);
 ```
 
 Or with the REPL:

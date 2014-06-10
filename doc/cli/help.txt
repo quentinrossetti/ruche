@@ -14,12 +14,11 @@ Commands:
 Options:
 
   -h, --help                output usage information
-  -v, --version             output the version number
-  -V, --verbose             display all the logs
+  -V, --version             output the version number
+  -v, --verbose             display all the logs
   -q, --quiet               do not show anything
 
-Environment variables:
+Configuration files:
 
-  RUCHE                     default installation directory
-  RUCHE_VAR                 where ruche puts databases, logs, pids and www
-  RUCHE_TOOLS               where ruche puts softwares
+  ~/.config/ruche/config    default configuration file
+  ~/.rucherc                Your config file (override)
