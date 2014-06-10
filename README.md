@@ -1,6 +1,6 @@
 [![ruche logo](https://raw.githubusercontent.com/quentinrossetti/ruche/master/doc/assets/ruche-logo.png)](https://github.com/quentinrossetti/ruche)
 
-[![Dependencies Status][david-image]][david-url] [![Build Status][travis-image]][travis-url]
+[![Dependencies Status][david-image]][david-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codeclimate-image]][codeclimate-url]
 
 > A Windows developer's best friend
 
@@ -37,3 +37,5 @@ ruche> version(); # Works too!
 [david-image]: https://david-dm.org/quentinrossetti/ruche.svg
 [travis-url]: https://travis-ci.org/quentinrossetti/ruche
 [travis-image]: http://img.shields.io/travis/quentinrossetti/ruche.svg
+[codeclimate-url]: https://codeclimate.com/github/quentinrossetti/ruche
+[codeclimate-image]: http://img.shields.io/codeclimate/github/quentinrossetti/ruche.svg
