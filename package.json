@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha --recursive --reporter spec",
+    "coveralls": "istanbul cover _mocha --report lcovonly -- --recursive --reporter spec && cat ./coverage/lcov.info",
     "start": "./bin/ruche.js"
   },
   "bin": {
@@ -40,6 +41,8 @@
   },
   "devDependencies": {
     "mocha": "^1.19.0",
-    "chai": "^1.9.1"
+    "chai": "^1.9.1",
+    "coveralls": "^2.10.0",
+    "mocha-lcov-reporter": "0.0.1"
   }
 }
