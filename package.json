@@ -6,7 +6,7 @@
   "scripts": {
     "start": "./bin/ruche.js",
     "test": "mocha --recursive --reporter spec",
-    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive --reporter min",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive --reporter spec",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "bin": {

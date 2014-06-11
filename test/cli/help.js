@@ -1,7 +1,7 @@
 // Module dependencies
 var debug = require('debug')('ruche:test:cli:help');
 var expect = require('chai').expect;
-var cli = require('../../lib/cli');
+var cli = require('../../lib/cli/argv');
 var fake = require('../util/fake');
 
 /**

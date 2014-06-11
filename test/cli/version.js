@@ -3,7 +3,7 @@ var debug = require('debug')('ruche:test:cli:version');
 var path = require('path');
 var fs = require('fs');
 var expect = require('chai').expect;
-var cli = require('../../lib/cli');
+var cli = require('../../lib/cli/argv');
 var fake = require('../util/fake');
 
 /**
