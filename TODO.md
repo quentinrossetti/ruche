@@ -1,6 +1,10 @@
 - [x] install feedback (cli)
 - [x] uninstall command
 - [x] alternatives command
+- [ ] missing tests
+- [ ] more descriptive error messages
+- [ ] fix error with cli when there is more than 6 packages to install 
+      (colors theme to fix)
 - [ ] installer for ruche!
 - [ ] write wiki for install, usage and packaging
 - [ ] use the cache for packages install
