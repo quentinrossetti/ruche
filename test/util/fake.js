@@ -33,6 +33,7 @@ var rcBefore = function () {
   fs.mkdirSync('.tmp/test/var/run');
   fs.mkdirSync('.tmp/test/var/www');
   fs.mkdirSync('.tmp/test/var/db');
+  console.log(path.resolve('.tmp'));
 };
 
 /**
