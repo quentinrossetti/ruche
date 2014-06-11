@@ -21,19 +21,19 @@ var argv = function (str) {
  * .tpm/test/
  */
 var rcBefore = function () {
-  var file = path.resolve('./test/util/config');
-  fs.writeFileSync('./.rucherc', fs.readFileSync(file));
-  fs.mkdirSync('.tmp');
-  fs.mkdirSync('.tmp/test');
-  fs.mkdirSync('.tmp/test/share');
-  fs.mkdirSync('.tmp/test/bin');
-  fs.mkdirSync('.tmp/test/etc');
-  fs.mkdirSync('.tmp/test/tmp');
-  fs.mkdirSync('.tmp/test/var');
-  fs.mkdirSync('.tmp/test/var/run');
-  fs.mkdirSync('.tmp/test/var/www');
-  fs.mkdirSync('.tmp/test/var/db');
-  console.log(path.resolve('.tmp'));
+  var fileRead = path.resolve(__dirname, 'config');
+  var fileCopy = path.resolve(__dirname, '../../.rucherc');
+  fs.writeFileSync(fileCopy, fs.readFileSync(fileRead));
+  fs.mkdirSync(path.resolve(__dirname, '../../.tmp'));
+  fs.mkdirSync(path.resolve(__dirname, '../../.tmp/test'));
+  fs.mkdirSync(path.resolve(__dirname, '../../.tmp/test/share'));
+  fs.mkdirSync(path.resolve(__dirname, '../../.tmp/test/bin'));
+  fs.mkdirSync(path.resolve(__dirname, '../../.tmp/test/etc'));
+  fs.mkdirSync(path.resolve(__dirname, '../../.tmp/test/tmp'));
+  fs.mkdirSync(path.resolve(__dirname, '../../.tmp/test/var'));
+  fs.mkdirSync(path.resolve(__dirname, '../../.tmp/test/var/run'));
+  fs.mkdirSync(path.resolve(__dirname, '../../.tmp/test/var/www'));
+  fs.mkdirSync(path.resolve(__dirname, '../../.tmp/test/var/db'));
 };
 
 /**
@@ -41,8 +41,8 @@ var rcBefore = function () {
  * run after the test.
  */
 var rcAfter = function () {
-  fs.unlinkSync('./.rucherc');
-  rimraf.sync('.tmp');
+  fs.unlinkSync(path.resolve(__dirname, '../../.rucherc'));
+  rimraf.sync(path.resolve(__dirname, '../../.tmp'));
 };
 
 module.exports.argv = argv;
