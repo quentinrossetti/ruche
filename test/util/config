@@ -1,0 +1,13 @@
+[dir]
+
+share  = .tmp/test/share
+path   = .tmp/test/bin
+config = .tmp/test/etc
+tmp    = .tmp/test/tmp
+pid    = .tmp/test/var/run
+www    = .tmp/test/var/www
+db     = .tmp/test/var/db
+
+[sources]
+
+repository = http://localhost:42001/
