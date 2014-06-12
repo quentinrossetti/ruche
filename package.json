@@ -7,8 +7,8 @@
     "start": "./bin/ruche.js",
     "doc": "jsdoc lib/ -r -d doc/api/ -c jsdoc.json",
     "test": "mocha --recursive --reporter spec",
-    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive --reporter spec",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha --dir test/coverage -- --recursive --reporter spec",
+    "coveralls": "cat ./test/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "bin": {
     "ruche": "./bin/ruche.js",
