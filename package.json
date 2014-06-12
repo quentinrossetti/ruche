@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "./bin/ruche.js",
+    "doc": "jsdoc lib/ -r -d doc/api/ -c jsdoc.json",
     "test": "mocha --recursive --reporter spec",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive --reporter spec",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
@@ -38,11 +39,13 @@
     "humanize": "0.0.9",
     "tar": "^0.1.19",
     "request": "^2.36.0",
-    "rimraf": "^2.2.8"
+    "rimraf": "^2.2.8",
+    "jsdoc": "^3.3.0-alpha8"
   },
   "devDependencies": {
     "mocha": "^1.19.0",
     "chai": "^1.9.1",
-    "istanbul": "^0.2.11"
+    "istanbul": "^0.2.11",
+    "fixture-stdout": "^0.2.1"
   }
 }
