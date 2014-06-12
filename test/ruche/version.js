@@ -10,7 +10,7 @@ var fixture = require('../fixture');
 var expect = chai.expect;
 
 /**
- * Test suite for ruche:install
+ * Test suite for ruche:version
  */
 describe('ruche:version', function () {
 
