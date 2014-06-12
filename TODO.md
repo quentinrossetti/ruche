@@ -9,3 +9,4 @@
 - [ ] write wiki for install, usage and packaging
 - [ ] use the cache for packages install
 - [ ] autocomplete
+- [ ] clean npm script `coveralls` and `.travis.yml`
