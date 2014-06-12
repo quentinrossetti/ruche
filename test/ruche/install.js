@@ -1,7 +1,7 @@
 // Module dependencies
 var debug = require('debug')('ruche:test:ruche:install');
 var expect = require('chai').expect;
-var cli = require('../../lib/cli');
+var ruche = require('../../lib/ruche');
 
 /**
  * Test suite for ruche:install
