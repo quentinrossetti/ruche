@@ -1,0 +1,3 @@
+test/cli
+test/ruche
+--reporter spec
