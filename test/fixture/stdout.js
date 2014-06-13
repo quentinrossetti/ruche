@@ -1,27 +1,23 @@
 // Module dependencies
 var debug = require('debug')('ruche:test:fixture:stdout');
-var fixtureSdtout = require('fixture-stdout');
-var stdoutFixture = new fixtureSdtout();
+
+// Initialization and configuration
+var old = process.stdout.write;
 
 /**
  * Fixture: A test fixture to intercept writes to stdout.
  */
 var before = function (data) {
-  stdoutFixture.capture(function (string, encoding, fd) {
-    data.push({
-      string: string,
-      encoding: encoding,
-      fd: fd,
-    });
-    return false;
-  });
+    process.stdout.write = function (write) {
+      data.push(write);
+    };
 };
 
 /**
  * Fixture-end: Go back to the original version of stdout
  */
 var after = function () {
-  stdoutFixture.release();
+  process.stdout.write = old;
 };
 
 module.exports.before = before;
