@@ -1,11 +1,15 @@
 #!/usr/bin/env node
-// Module dependencies.
-var _ = require('underscore');
+
+// Will print debug informations if --verbose is set
+var = require('underscore');
 if (_.contains(process.argv, '--verbose') || _.contains(process.argv, '-v')) {
   process.env.DEBUG = 'ruche*';
 }
-var debug = require('debug')('ruche:bin');
-var cli = require('../lib/cli');
 
-// Run the command-line client.
+// Module dependencies
+var debug = require('debug')('ruche:bin');
+var cli   = require('../lib/cli');
+
+// Run the command-line client
+debug('Invoking ruche from command-line');
 cli(process.argv);
