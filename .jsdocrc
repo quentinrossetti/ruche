@@ -2,7 +2,16 @@
   "tags": {
     "allowUnknownTags": true
   },
-  "plugins": ["plugins/markdown" ],
+  "source": {
+    "include": "lib/"
+  },
+  "opts": {
+    "destination": "doc/api/",
+    "recurse": true
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
   "templates": {
     "cleverLinks": true,
     "monospaceLinks": false

@@ -2,10 +2,11 @@
   "name": "ruche",
   "version": "0.0.1",
   "description": "A Windows developer's best friend",
-  "main": "lib/index.js",
+  "main": "lib/ruche",
   "scripts": {
-    "start": "./bin/ruche.js",
-    "doc": "jsdoc lib/ -r -d doc/api/ -c jsdoc.json",
+    "start": "node ./bin/ruche.js",
+    "doc": "jsdoc -c .jsdocrc",
+    "jshint": "jshint . --reporter node_modules/jshint-stylish/stylish.js",
     "test": "mocha",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha --dir test/coverage",
     "coveralls": "npm install coveralls && cat ./test/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
@@ -46,6 +47,8 @@
     "mocha": "^1.19.0",
     "chai": "^1.9.1",
     "istanbul": "^0.2.11",
-    "fixture-stdout": "^0.2.1"
+    "fixture-stdout": "^0.2.1",
+    "jshint": "^2.5.1",
+    "jshint-stylish": "^0.2.0"
   }
 }
