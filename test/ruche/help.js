@@ -36,6 +36,13 @@ describe('ruche:help', function () {
     });
   });
 
+  it('should send the global help when unknown command', function (done) {
+    ruche.help('unknown', function(err, data) {
+      expect(data.split('\n')).to.contain('Commands:');
+      done();
+    });
+  });
+
   it('should send the appropriate context help', function (done) {
     ruche.help('install', function(err, data) {
       expect(data.split('\n')[0].split(' ')).to.contain('install');
