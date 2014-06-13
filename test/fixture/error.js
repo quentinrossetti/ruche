@@ -23,8 +23,7 @@ var packageUnreachableBefore = function () {
   fileRead = path.resolve(__dirname, '../../package.json');
   fileCopy = path.resolve(__dirname, '../../.tmp/test/packageOrginal.json');
   fs.writeFileSync(fileCopy, fs.readFileSync(fileRead));
-  // Replace by broken package.json
-  fileRead = path.resolve(__dirname, '../../package.json');
+  // Delete package.json
   fs.unlinkSync(fileRead);
 }
 
@@ -37,6 +36,28 @@ var packageAfter = function () {
   fs.writeFileSync(fileCopy, fs.readFileSync(fileRead));
 }
 
+var helpUnreachableBefore = function () {
+  var fileRead;
+  var fileCopy;
+  // Copy original help file
+  fileRead = path.resolve(__dirname, '../../doc/cli/help.txt');
+  fileCopy = path.resolve(__dirname, '../../.tmp/test/help.txt');
+  fs.writeFileSync(fileCopy, fs.readFileSync(fileRead));
+  // Delete help file
+  fs.unlinkSync(fileRead);
+}
+
+var helpAfter = function () {
+  var fileRead;
+  var fileCopy;
+  // Restore original package.json
+  fileRead = path.resolve(__dirname, '../../.tmp/test/help.txt');
+  fileCopy = path.resolve(__dirname, '../../doc/cli/help.txt');
+  fs.writeFileSync(fileCopy, fs.readFileSync(fileRead));
+}
+
 module.exports.packageInvalidBefore     = packageInvalidBefore;
 module.exports.packageUnreachableBefore = packageUnreachableBefore;
 module.exports.packageAfter             = packageAfter;
+module.exports.helpUnreachableBefore    = helpUnreachableBefore;
+module.exports.helpAfter                = helpAfter;
