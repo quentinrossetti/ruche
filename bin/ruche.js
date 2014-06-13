@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Will print debug informations if --verbose is set
-var = require('underscore');
+var _ = require('underscore');
 if (_.contains(process.argv, '--verbose') || _.contains(process.argv, '-v')) {
   process.env.DEBUG = 'ruche*';
 }
