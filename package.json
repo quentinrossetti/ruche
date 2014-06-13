@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./bin/ruche.js",
     "doc": "jsdoc -c .jsdocrc",
-    "jshint": "jshint . --reporter node_modules/jshint-stylish/stylish.js",
+    "hint": "gulp hint",
     "test": "mocha",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha --dir test/coverage",
     "coveralls": "npm install coveralls && cat ./test/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
@@ -49,6 +49,7 @@
     "istanbul": "^0.2.11",
     "fixture-stdout": "^0.2.1",
     "jshint": "^2.5.1",
-    "jshint-stylish": "^0.2.0"
+    "jshint-stylish": "^0.2.0",
+    "gulp": "^3.8.0"
   }
 }
