@@ -8,9 +8,9 @@ var old = process.stdout.write;
  * Fixture: A test fixture to intercept writes to stdout.
  */
 var before = function (data) {
-    process.stdout.write = function (write) {
-      data.push(write);
-    };
+  process.stdout.write = function (write) {
+    data.push(write);
+  };
 };
 
 /**
