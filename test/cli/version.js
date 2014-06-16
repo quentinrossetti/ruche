@@ -15,11 +15,11 @@ var expect = chai.expect;
 describe('cli:version', function () {
 
   before(function () {
-    fixture.rc.before();
+    fixture.env.before();
     debug('Test suite for cli:version started');
   });
   after(function () {
-    fixture.rc.after();
+    fixture.env.after();
     debug('Test suite for cli:version ended');
   });
 

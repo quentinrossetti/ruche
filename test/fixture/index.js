@@ -1,7 +1,7 @@
 var fixture = {
-  argv:   require('./argv'),
-  error:  require('./error'),
-  rc:     require('./rc'),
+  argv  : require('./argv'),
+  env   : require('./env'),
+  error : require('./error'),
   server: require('./server'),
   stdout: require('./stdout'),
 }

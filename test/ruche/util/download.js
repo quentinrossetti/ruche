@@ -16,10 +16,10 @@ describe('ruche:util:download', function () {
 
   before(function () {
     debug('Test suite for ruche:util:download started');
-    fixture.rc.before();
+    fixture.env.before();
   });
   after(function () {
-    fixture.rc.after();
+    fixture.env.after();
     debug('Test suite for ruche:util:download ended');
   });
 

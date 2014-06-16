@@ -16,10 +16,10 @@ describe('ruche:help', function () {
 
   before(function () {
     debug('Test suite for ruche:help started');
-    fixture.rc.before();
+    fixture.env.before();
   });
   after(function () {
-    fixture.rc.after();
+    fixture.env.after();
     debug('Test suite for ruche:help ended');
   });
 

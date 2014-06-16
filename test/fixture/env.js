@@ -5,15 +5,11 @@ var fs = require('fs');
 var rimraf = require('rimraf');
 
 /**
- * **Fixture**: Fake a configuration file. Must be run before tests. It uses
- * fsSync function to be sure the test are run with all they need, async
- * behaviour way be a problem otherwise. It also creates a fake env under
- * .tpm/test/
+ * **Fixture**: Fake a configuration env .tpm/test/. Must be run before
+ * tests. It uses fsSync function to be sure the test are run with all they
+ * need, async behaviour way be a problem otherwise.
  */
 var before = function () {
-  var fileRead = path.resolve(__dirname, '../..', 'test/fixture/.rucherc');
-  var fileCopy = path.resolve(__dirname, '../..', '.rucherc');
-  fs.writeFileSync(fileCopy, fs.readFileSync(fileRead));
   fs.mkdirSync(path.resolve(__dirname, '../..', '.tmp'));
   fs.mkdirSync(path.resolve(__dirname, '../..', '.tmp/test'));
   fs.mkdirSync(path.resolve(__dirname, '../..', '.tmp/test/share'));
@@ -27,11 +23,9 @@ var before = function () {
 };
 
 /**
- * **Fixture**: Delete the fake configuration file and the fake
- * environement.
+ * **Fixture**: Delete the fake environement.
  */
 var after = function () {
-  fs.unlinkSync(path.resolve(__dirname, '../..', '.rucherc'));
   rimraf.sync(path.resolve(__dirname, '../..', '.tmp'));
 };
 

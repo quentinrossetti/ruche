@@ -2,3 +2,4 @@ test/cli
 test/ruche
 --reporter spec
 --recursive
+--config test/fixture/.rucherc

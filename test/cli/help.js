@@ -16,10 +16,10 @@ describe('cli:help', function () {
 
   before(function () {
     debug('Test suite for cli:help started');
-    fixture.rc.before();
+    fixture.env.before();
   });
   after(function () {
-    fixture.rc.after();
+    fixture.env.after();
     debug('Test suite for cli:help ended');
   });
 
