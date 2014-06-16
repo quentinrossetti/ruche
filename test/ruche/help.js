@@ -1,8 +1,8 @@
 // Module dependencies
+/* global describe, it, before, after, beforeEach, afterEach */
+'use strict';
 var debug   = require('debug')('ruche:test:ruche:help');
 var chai    = require('chai');
-var path    = require('path');
-var fs      = require('fs');
 var ruche   = require('../../lib/ruche');
 var fixture = require('../fixture');
 
@@ -15,10 +15,12 @@ var expect = chai.expect;
 describe('ruche:help', function () {
 
   before(function () {
+    debug('Test suite for ruche:help started');
     fixture.rc.before();
   });
   after(function () {
     fixture.rc.after();
+    debug('Test suite for ruche:help ended');
   });
 
   it('should send a valid help', function (done) {
@@ -52,6 +54,7 @@ describe('ruche:help', function () {
 
   it('should send a error when unreachable help', function (done) {
     fixture.error.helpUnreachableBefore();
+    /*jshint unused:false */
     ruche.help(function(err, data) {
       expect(err.message).to.equal('Can\'t read the help file');
       fixture.error.helpAfter();
