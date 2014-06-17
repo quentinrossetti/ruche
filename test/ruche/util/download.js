@@ -17,6 +17,7 @@ describe('ruche:util:download', function () {
   before(function () {
     debug('Test suite for ruche:util:download started');
     fixture.env.before();
+    fixture.server.before();
   });
   after(function () {
     fixture.env.after();
@@ -26,8 +27,8 @@ describe('ruche:util:download', function () {
   it('should get an archive', function (done) {
     var download = require('../../../lib/ruche/util/download');
     var match = {
-      package: 'curl',
-      version: '7.35.0',
+      package: 'fixpack',
+      version: '0.0.1',
       platform: 'win32'
     };
     /*jshint unused:false */
@@ -36,6 +37,19 @@ describe('ruche:util:download', function () {
         expect(stats.isFile()).to.be.ok;
         done();
       });
+    });
+  });
+
+  it('should send an error when invalid match', function (done) {
+    var download = require('../../../lib/ruche/util/download');
+    var match = {
+      package: 'fixpack',
+      version: '0.0.1broken',
+    };
+    /*jshint unused:false */
+    download(match, 0, function(err, location) {
+      expect(err.message).to.equal('Unaccessible URI');
+      done();
     });
   });
 
