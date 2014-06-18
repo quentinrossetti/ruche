@@ -10,7 +10,7 @@ var emitter = require('../../../lib/ruche/util/emitter');
 var expect = chai.expect;
 
 /**
- * Test suite for ruche:util:download
+ * Test suite for ruche:util:error
  */
 describe('ruche:util:error', function () {
 
