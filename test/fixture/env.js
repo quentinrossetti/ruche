@@ -25,6 +25,18 @@ var before = function () {
 };
 
 /**
+ * Fixture: Mimic a downloaded package
+ */
+var extractBefore = function () {
+  var originPath = 'fixpack/dist/fixpack-0.0.1-win32.tar.gz';
+  var copyPath   = '../../.tmp/test/tmp/fixpack-0.0.1-win32.tar.gz';
+  var origin     = path.resolve(__dirname, originPath);
+  var copy       = path.resolve(__dirname, copyPath);
+  fs.writeFileSync(copy, fs.readFileSync(origin));
+  debug('Mimic a downloaded package');
+};
+
+/**
  * Fixture: Delete the fake environement.
  */
 var after = function () {
@@ -32,5 +44,6 @@ var after = function () {
   debug('Fake environement deleted');
 };
 
-module.exports.before = before;
-module.exports.after = after;
+module.exports.before        = before;
+module.exports.extractBefore = extractBefore;
+module.exports.after         = after;

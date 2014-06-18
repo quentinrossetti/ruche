@@ -77,8 +77,18 @@ var helpAfter = function () {
   debug('Restaure the orginal help file');
 };
 
+/**
+ * Fixture: Remove the fake download
+ */
+var extractBefore = function () {
+  var copyPath   = '../../.tmp/test/tmp/fixpack-0.0.1-win32.tar.gz';
+  fs.unlinkSync(path.resolve(__dirname, copyPath));
+  debug('Remove the fake download');
+};
+
 module.exports.packageInvalidBefore     = packageInvalidBefore;
 module.exports.packageUnreachableBefore = packageUnreachableBefore;
 module.exports.packageAfter             = packageAfter;
 module.exports.helpUnreachableBefore    = helpUnreachableBefore;
 module.exports.helpAfter                = helpAfter;
+module.exports.extractBefore            = extractBefore;
