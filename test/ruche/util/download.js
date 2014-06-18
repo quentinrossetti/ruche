@@ -1,7 +1,7 @@
 // Module dependencies
 /* global describe, it, before, after, beforeEach, afterEach */
 'use strict';
-var debug   = require('debug')('ruche:test:ruche:util:download');
+var debug   = require('debug')('ruche:test:ruche:util');
 var fs      = require('fs');
 var chai    = require('chai');
 var fixture = require('../../fixture');
