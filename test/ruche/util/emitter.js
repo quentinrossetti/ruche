@@ -21,10 +21,12 @@ describe('ruche:util:emitter', function () {
   });
 
   it('should have a `on` method', function () {
+    emitter();
     expect(emitter).to.have.property('on');
   });
 
   it('should have a `emit` method', function () {
+    emitter();
     expect(emitter).to.have.property('emit');
   });
 
