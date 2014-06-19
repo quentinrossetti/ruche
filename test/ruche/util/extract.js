@@ -56,4 +56,18 @@ describe('ruche:util:extract', function () {
     });
   });
 
+  it('should send an error when invalid archive', function (done) {
+    var match = {
+      package: 'fixpack',
+      version: '0.0.1broken',
+      platform: 'win32'
+    };
+    /*jshint unused:false */
+    extract(match, 0, function (err, location) {
+      if (err.message === 'No downloaded package to extract') {
+        done();
+      }
+    });
+  });
+
 });
