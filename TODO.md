@@ -11,3 +11,4 @@
 - [ ] autocomplete
 - [x] clean npm script `coveralls` and `.travis.yml`
 - [ ] spell checking
+- [ ] update command
