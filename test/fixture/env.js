@@ -4,6 +4,7 @@ var debug = require('debug')('ruche:test:fixture');
 var path = require('path');
 var fs = require('fs');
 var rimraf = require('rimraf');
+var untilde = require('../../lib/ruche/util/untilde');
 
 /**
  * Fixture: Fake a configuration env .tpm/test/. Must be run before
@@ -27,9 +28,9 @@ var before = function () {
 /**
  * Fixture: Mimic a downloaded package
  */
-var extractBefore = function () {
-  var originPath = 'fixpack/dist/fixpack-0.0.1-win32.tar.gz';
-  var copyPath   = '../../.tmp/test/tmp/fixpack-0.0.1-win32.tar.gz';
+var extractBefore = function (long) {
+  var originPath = 'fixpack/dist/' + long + '.tar.gz';
+  var copyPath   = '../../.tmp/test/tmp/' + long + '.tar.gz';
   var origin     = path.resolve(__dirname, originPath);
   var copy       = path.resolve(__dirname, copyPath);
   fs.writeFileSync(copy, fs.readFileSync(origin));
@@ -44,6 +45,13 @@ var after = function () {
   debug('Fake environement deleted');
 };
 
+var registerAfter = function () {
+  fs.unlinkSync(untilde('@/.tmp/test/bin/run0.cmd'));
+  fs.unlinkSync(untilde('@/.tmp/test/bin/run1.cmd'));
+  fs.unlinkSync(untilde('@/.tmp/test/bin/run2.cmd'));
+};
+
 module.exports.before        = before;
 module.exports.extractBefore = extractBefore;
 module.exports.after         = after;
+module.exports.registerAfter         = registerAfter;

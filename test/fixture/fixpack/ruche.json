@@ -6,5 +6,15 @@
     "bin": {
       "run": "run.cmd"
     }
+  },
+  {
+    "package": "fixpack",
+    "version": "0.0.2",
+    "platform": "win32",
+    "bin": {
+      "run0": "run0.cmd",
+      "run1": "run1.cmd",
+      "run2": "run2.cmd"
+    }
   }
 ]

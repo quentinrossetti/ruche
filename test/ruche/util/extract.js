@@ -18,7 +18,7 @@ describe('ruche:util:extract', function () {
   before(function () {
     debug('Test suite for ruche:util:extract started');
     fixture.env.before();
-    fixture.env.extractBefore();
+    fixture.env.extractBefore('fixpack-0.0.1-win32');
   });
   after(function () {
     fixture.env.after();
