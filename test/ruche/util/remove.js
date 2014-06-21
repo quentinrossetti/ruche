@@ -4,6 +4,7 @@
 var debug   = require('debug')('ruche:test:ruche:util');
 var fs      = require('fs');
 var chai    = require('chai');
+var rimraf  = require('rimraf');
 var remove  = require('../../../lib/ruche/util/remove');
 var untilde = require('../../../lib/ruche/util/untilde');
 var fixture = require('../../fixture');
@@ -34,9 +35,11 @@ describe('ruche:util:remove', function () {
     fixture.env.after();
     debug('Test suite for ruche:util:remove ended');
   });
+  beforeEach(function () {
+    fixture.env.removeBefore();
+  });
 
   it('should remove binaries', function (done) {
-    fixture.env.removeBefore();
     remove(match, 0, function () {
       var r = fs.readdirSync(untilde('@/.tmp/test/bin'));
       expect(r).to.eql([]);
@@ -45,7 +48,6 @@ describe('ruche:util:remove', function () {
   });
 
   it('should ignore remove binaries when there is none', function (done) {
-    fixture.env.removeBefore();
     var match = {
       package: 'fixpack',
       version: '0.0.2',
@@ -59,16 +61,14 @@ describe('ruche:util:remove', function () {
   });
 
   it('should remove `share/fixpack` when only one version', function (done) {
-    fixture.env.removeBefore();
     remove(match, 0, function () {
       var r = fs.readdirSync(untilde('@/.tmp/test/share'));
-      expect(r).to.eql([]);
+      expect(r.length).to.eql(0);
       done();
     });
   });
 
   it('should remove `etc/fixpack` folder', function (done) {
-    fixture.env.removeBefore();
     remove(match, 0, function () {
       var r = fs.existsSync(untilde('@/.tmp/test/etc/fixpack'));
       expect(r).to.eql(false);
@@ -77,11 +77,21 @@ describe('ruche:util:remove', function () {
   });
 
   it('should rm `fixpack-0.0.1-win32` only when more version', function (done) {
-    fixture.env.removeBefore();
     fs.mkdirSync(untilde('@/.tmp/test/share/fixpack/fixpack-0.0.3-win32'));
     remove(match, 0, function () {
       var r = fs.readdirSync(untilde('@/.tmp/test/share/fixpack'));
       expect(r.length).to.eql(1);
+      rimraf.sync(untilde('@/.tmp/test/share/fixpack/fixpack-0.0.3-win32'));
+      rimraf.sync(untilde('@/.tmp/test/share/fixpack'));
+      done();
+    });
+  });
+
+  it('should ignore remove `etc` when there is none', function (done) {
+    rimraf.sync(untilde('@/.tmp/test/etc/fixpack'));
+    remove(match, 0, function () {
+      var r = fs.readdirSync(untilde('@/.tmp/test/etc'));
+      expect(r.length).to.eql(0);
       done();
     });
   });
