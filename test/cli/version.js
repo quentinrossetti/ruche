@@ -23,38 +23,28 @@ describe('cli:version', function () {
     debug('Test suite for cli:version ended');
   });
 
-  it('--version should produce `version` context', function() {
-    var argv = cli(fixture.argv('ruche --version'));
-    expect(argv.context).to.equal('version');
-  });
+  // it('should print a valid version to stdout', function(done) {
+  //   var capture = [];
+  //   fixture.stdout.before(capture);
+  //   /*jshint unused:false */
+  //   cli.version(function(data) {
+  //     fixture.stdout.after();
+  //     expect(capture[0]).to.match(/^v\d+.\d+.\d+\n$/);
+  //     done();
+  //   });
+  // });
 
-  it('-V should produce `version` context', function() {
-    var argv = cli(fixture.argv('ruche -V'));
-    expect(argv.context).to.equal('version');
-  });
-
-  it('should print a valid version to stdout', function(done) {
-    var capture = [];
-    fixture.stdout.before(capture);
-    /*jshint unused:false */
-    cli.version(function(data) {
-      fixture.stdout.after();
-      expect(capture[0]).to.match(/^v\d+.\d+.\d+\n$/);
-      done();
-    });
-  });
-
-  it('should send a error when unreachable package.json', function (done) {
-    var capture = [];
-    fixture.stdout.before(capture);
-    fixture.error.packageUnreachableBefore();
-    /*jshint unused:false */
-    cli.version(function(data) {
-      fixture.error.packageAfter();
-      fixture.stdout.after();
-      expect(capture[0]).to.have.string('Error:');
-      done();
-    });
-  });
+  // it('should send a error when unreachable package.json', function (done) {
+  //   var capture = [];
+  //   fixture.stdout.before(capture);
+  //   fixture.error.packageUnreachableBefore();
+  //   /*jshint unused:false */
+  //   cli.version(function(data) {
+  //     fixture.error.packageAfter();
+  //     fixture.stdout.after();
+  //     expect(capture[0]).to.have.string('Error:');
+  //     done();
+  //   });
+  // });
 
 });

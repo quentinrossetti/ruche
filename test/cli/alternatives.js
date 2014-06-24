@@ -1,7 +1,7 @@
 // Module dependencies
 /* global describe, it, before, after, beforeEach, afterEach */
 'use strict';
-var debug   = require('debug')('ruche:test:cli:help');
+var debug   = require('debug')('ruche:test:cli');
 var chai    = require('chai');
 var cli     = require('../../lib/cli');
 var fixture = require('../fixture');
@@ -10,20 +10,20 @@ var fixture = require('../fixture');
 var expect = chai.expect;
 
 /**
- * Test suite for cli:help
+ * Test suite for cli:alternatives
  */
-describe('cli:help', function () {
+describe('cli:alternatives', function () {
 
   before(function () {
-    debug('Test suite for cli:help started');
+    debug('Test suite for cli:alternatives started');
     fixture.env.before();
   });
   after(function () {
     fixture.env.after();
-    debug('Test suite for cli:help ended');
+    debug('Test suite for cli:alternatives ended');
   });
 
-  // it('should print a valid help to stdout', function(done) {
+  // it('should print a valid alternatives to stdout', function(done) {
   //   var capture = [];
   //   fixture.stdout.before(capture);
   //   /*jshint unused:false */
