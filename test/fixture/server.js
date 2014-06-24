@@ -20,6 +20,8 @@ var before = function () {
     });
   }).listen(42002, function () {
     debug('HTTP server that serve static files under `test/fixtures`');
+  }).on('error', function (err) {
+    return 'Already in use!';
   });
 };
 

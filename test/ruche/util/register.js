@@ -6,6 +6,7 @@ var fs      = require('fs');
 var chai    = require('chai');
 var rimraf  = require('rimraf');
 var fixture = require('../../fixture');
+var emitter = require('../../../lib/ruche/util/emitter');
 
 // Initialization and configuration
 var expect = chai.expect;
@@ -29,6 +30,13 @@ describe('ruche:util:register', function () {
     debug('Test suite for ruche:util:register started');
     fixture.env.before();
     fixture.env.extractBefore('fixpack-0.0.2-win32');
+    // Avoid colision with the install test suite
+    emitter.removeAllListeners('reg-done-0');
+    emitter.removeAllListeners('reg-data-0');
+    emitter.removeAllListeners('reg-done-1');
+    emitter.removeAllListeners('reg-data-1');
+    emitter.removeAllListeners('reg-done-2');
+    emitter.removeAllListeners('reg-data-2');
   });
   after(function () {
     fixture.env.after();
