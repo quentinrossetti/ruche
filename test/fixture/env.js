@@ -5,6 +5,7 @@ var path = require('path');
 var fs = require('fs');
 var rimraf = require('rimraf');
 var untilde = require('../../lib/ruche/util/untilde');
+var emitter = require('../../lib/ruche/util/emitter');
 
 /**
  * Fixture: Fake a configuration env .tpm/test/. Must be run before
@@ -12,6 +13,7 @@ var untilde = require('../../lib/ruche/util/untilde');
  * need, async behaviour way be a problem otherwise.
  */
 var before = function () {
+  emitter.removeAllListeners();
   fs.mkdirSync(untilde('@/.tmp'));
   fs.mkdirSync(untilde('@/.tmp/test'));
   fs.mkdirSync(untilde('@/.tmp/test/share'));
