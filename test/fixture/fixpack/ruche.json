@@ -9,6 +9,14 @@
   },
   {
     "package": "fixpack",
+    "version": "0.0.1",
+    "platform": "win64",
+    "bin": {
+      "run": "run.cmd"
+    }
+  },
+  {
+    "package": "fixpack",
     "version": "0.0.2",
     "platform": "win32",
     "bin": {

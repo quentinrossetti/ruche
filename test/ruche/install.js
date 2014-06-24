@@ -25,43 +25,26 @@ describe('ruche:install', function () {
   });
 
   it('should send a list of what packages are installed', function (done) {
-    ruche.install(['fixpack-0.0.2-win32'], function (err, data) {
-      expect(data.length).to.eql(1);
-      console.log('TEST ');
+    ruche.install(['fixpack-0.0.1-win32', 'fixpack'], function (err, data) {
+      expect(data.length).to.eql(2);
       done();
     });
   });
 
-  // it('should send a list of commands and options', function (done) {
-  //   ruche.install(function(err, data) {
-  //     expect(data.split('\n')).to.contain('Commands:');
-  //     expect(data.split('\n')).to.contain('Options:');
-  //     done();
-  //   });
-  // });
+  it('should an error when unable to find a package information', function (done) {
+    ruche.install(['invalid'], function (err, data) {
+      if (err) {
+        done();
+      }
+    });
+  });
 
-  // it('should send the global install when unknown command', function (done) {
-  //   ruche.install('unknown', function(err, data) {
-  //     expect(data.split('\n')).to.contain('Commands:');
-  //     done();
-  //   });
-  // });
-
-  // it('should send the appropriate context install', function (done) {
-  //   ruche.install('install', function(err, data) {
-  //     expect(data.split('\n')[0].split(' ')).to.contain('install');
-  //     done();
-  //   });
-  // });
-
-  // it('should send a error when unreachable install', function (done) {
-  //   fixture.error.installUnreachableBefore();
-  //   /*jshint unused:false */
-  //   ruche.install(function(err, data) {
-  //     expect(err.message).to.equal('Can\'t read the install file');
-  //     fixture.error.installAfter();
-  //     done();
-  //   });
-  // });
+  it('should an error when unable to find a package', function (done) {
+    ruche.install(['fixpack-0.0.1-win64'], function (err, data) {
+      if (err) {
+        done();
+      }
+    });
+  });
 
 });
