@@ -23,16 +23,16 @@ describe('cli:alternatives', function () {
     debug('Test suite for cli:alternatives ended');
   });
 
-  // it('should print a valid alternatives to stdout', function(done) {
-  //   var capture = [];
-  //   fixture.stdout.before(capture);
-  //   /*jshint unused:false */
-  //   cli.help('global', function(data) {
-  //     fixture.stdout.after();
-  //     expect(capture[0].split('\n').length).to.be.at.least(5);
-  //     done();
-  //   });
-  // });
+  it('should print alternatives to stdout', function (done) {
+    var capture = [];
+    fixture.stdout.before(capture);
+    /*jshint unused:false */
+    cli.alternatives('curl', function (data) {
+      fixture.stdout.after();
+      expect(capture[0].split('\n').length).to.be.at.least(5);
+      done();
+    });
+  });
 
   // it('should send a error when unreachable help file', function (done) {
   //   var capture = [];

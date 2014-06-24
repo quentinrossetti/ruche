@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Module dependencies
-var debug   = require('debug')('ruche:repl');
+var debug   = require('debug')('ruche:bin');
 var repl    = require('repl');
 var ruche   = require('../lib/ruche');
 
