@@ -25,22 +25,6 @@ describe('ruche:util:extract', function () {
     debug('Test suite for ruche:util:extract ended');
   });
 
-  it('should extract into `tmp` as a `.tar` file', function (done) {
-    var extract = require('../../../lib/ruche/util/extract');
-    var match = {
-      package: 'fixpack',
-      version: '0.0.1',
-      platform: 'win32'
-    };
-    /*jshint unused:false */
-    extract(match, 0, function (err, location) {
-      fs.stat('.tmp/test/tmp/fixpack-0.0.1-win32.tar', function (err, stats) {
-        expect(stats.isFile()).to.be.ok;
-        done();
-      });
-    });
-  });
-
   it('should properly extract into `share`', function (done) {
     var match = {
       package: 'fixpack',
