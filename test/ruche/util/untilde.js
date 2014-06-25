@@ -28,7 +28,7 @@ describe('ruche:util:untilde', function () {
     expect(r).to.eql(home);
   });
 
-  it('@ should returns the user home', function () {
+  it('@ should returns the install folder', function () {
     var r = untilde('@');
     expect(r).to.eql(path.resolve(__dirname, '../../..'));
   });
