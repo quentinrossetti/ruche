@@ -1,6 +1,6 @@
 [![ruche logo](https://raw.githubusercontent.com/quentinrossetti/ruche/master/doc/assets/ruche-logo.png)](https://github.com/quentinrossetti/ruche)
 
-[![Dependencies Status][gemnasium-image]][gemnasium-url] [![Build Status][travis-image]][travis-url] [![Code quality][codeclimate-image]][codeclimate-url] [![Code coverage][coveralls-image]][coveralls-url]
+[![Dependencies Status][gemnasium-image]][gemnasium-url] [![Build Status][travis-image]][travis-url] [![Code quality][codeclimate-image]][codeclimate-url] [![Code coverage][coveralls-image]][coveralls-url] [![Release][npm-image]][npm-url]
 
 > A developer-friendly Windows package manager
 
@@ -18,7 +18,7 @@ ruche uninstall <package>
 ruche alternatives <package>
 ```
 
-As a node module:
+Or as a node module:
 ```js
 var ruche = require('ruche');
 ruche.install(['git'], function (err, packages) {
@@ -28,6 +28,16 @@ ruche.install(['git'], function (err, packages) {
   console.log('Packages installed %s', packages)
 });
 ```
+
+## Installation
+
+### If you have Node.js
+
+```bat
+npm install --global ruche
+```
+
+You are now ready to go!
 
 [ruche-url]: https://github.com/quentinrossetti/ruche
 [ruche-image]: raw.githubusercontent.com/quentinrossetti/ruche/master/doc/assets/ruche-logo.png
@@ -41,3 +51,5 @@ ruche.install(['git'], function (err, packages) {
 [codeclimate-image]: http://img.shields.io/codeclimate/github/quentinrossetti/ruche.svg
 [coveralls-url]: https://coveralls.io/r/quentinrossetti/ruche
 [coveralls-image]: http://img.shields.io/coveralls/quentinrossetti/ruche.svg
+[npm-url]: https://www.npmjs.org/package/ruche
+[npm-image]: http://img.shields.io/npm/v/ruche.svg
