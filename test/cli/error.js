@@ -8,6 +8,7 @@ var fixture = require('../fixture');
 
 // Initialization and configuration
 var expect = chai.expect;
+var stdout = process.stdout;
 
 /**
  * Test suite for cli:error
@@ -24,8 +25,13 @@ describe('cli:error', function () {
   });
 
   it('should return a error message', function() {
-    var e = new Error('test');
-    expect(error(e)).to.have.string('Error');
+    var capture = [];
+    stdout.hook('write', function(string, encoding, fd, write) {
+      capture.push(string);
+    }, true);
+    error(new Error('test'));
+    stdout.unhook('write');
+    expect(capture[0]).to.have.string('Error');
   });
 
 
