@@ -7,7 +7,6 @@
       (colors theme to fix)
 - [ ] installer for ruche!
 - [ ] write wiki for install, usage and packaging
-- [ ] use the cache for packages install
 - [ ] autocomplete
 - [x] clean npm script `coveralls` and `.travis.yml`
 - [ ] spell checking
