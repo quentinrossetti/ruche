@@ -2,7 +2,7 @@
 - [x] uninstall command
 - [x] alternatives command
 - [ ] missing tests
-- [ ] more descriptive error messages
+- [x] more descriptive error messages
 - [ ] fix error with cli when there is more than 6 packages to install
       (colors theme to fix)
 - [ ] installer for ruche!
