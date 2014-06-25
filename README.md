@@ -2,7 +2,7 @@
 
 [![Dependencies Status][gemnasium-image]][gemnasium-url] [![Build Status][travis-image]][travis-url] [![Code quality][codeclimate-image]][codeclimate-url] [![Code coverage][coveralls-image]][coveralls-url]
 
-> A Windows developer's best friend
+> A developer-friendly Windows package manager
 
 ## What is ruche ?
 
@@ -21,14 +21,12 @@ ruche alternatives <package>
 As a node module:
 ```js
 var ruche = require('ruche');
-ruche.install(['git']);
-```
-
-Or with the REPL:
-```bat
-ruche-repl
-ruche> ruche.version();
-ruche> version(); # Works too!
+ruche.install(['git'], function (err, packages) {
+  if (err) {
+    // handle the error
+  }
+  console.log('Packages installed %s', packages)
+});
 ```
 
 [ruche-url]: https://github.com/quentinrossetti/ruche

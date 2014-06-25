@@ -1,7 +1,7 @@
 {
   "name": "ruche",
   "version": "0.0.1",
-  "description": "A Windows developer's best friend",
+  "description": "A developer-friendly Windows package manager",
   "main": "lib/ruche",
   "scripts": {
     "start": "node ./bin/ruche.js",
