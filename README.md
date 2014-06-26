@@ -58,5 +58,5 @@ You are now ready to go!
 [coveralls-image]: http://img.shields.io/coveralls/quentinrossetti/ruche.svg
 [npm-url]: https://www.npmjs.org/package/ruche
 [npm-image]: http://img.shields.io/npm/v/ruche.svg
-[rtfd-url]: https://readthedocs.org/projects/ruche/badge
-[rtfd-image]: http://img.shields.io/npm/v/ruche.svg
+[rtfd-url]: https://ruche.readthedocs.org
+[rtfd-image]: https://readthedocs.org/projects/ruche/badge
