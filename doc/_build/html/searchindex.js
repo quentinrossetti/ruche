@@ -1,0 +1,1 @@
+Search.setIndex({objnames:{},titleterms:{ruch:0,document:0,indic:0,welcom:0,tabl:0},titles:["Welcome to ruche&#8217;s documentation!"],filenames:["index"],envversion:43,terms:{content:0,search:0,modul:0,page:0,index:0},objtypes:{},objects:{}})

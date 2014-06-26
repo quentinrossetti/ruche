@@ -1,6 +1,6 @@
 {
-  "tags": {
-    "allowUnknownTags": true
+  "tags"      : {
+    "allowUnknownTags" : true
   },
   "source": {
     "include": "lib/"
@@ -12,12 +12,8 @@
   "plugins": [
     "plugins/markdown"
   ],
-  "templates": {
-    "cleverLinks": true,
-    "monospaceLinks": false
-  },
-  "markdown": {
-    "parser": "gfm",
-    "hardwrap": true
+  "markdown"  : {
+    "parser"   : "gfm",
+    "hardwrap" : true
   }
 }
