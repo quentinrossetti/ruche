@@ -16,6 +16,9 @@
   "trailing": true,
   "maxlen": 80,
 
+  // Relaxing options
+  "loopfunc": true,
+
   // Environments
   "node": true
 }
