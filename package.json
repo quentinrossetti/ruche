@@ -5,8 +5,6 @@
   "main": "lib/ruche",
   "scripts": {
     "start": "node ./bin/ruche.js",
-    "doc": "jsdoc -c .jsdocrc",
-    "hint": "gulp hint",
     "test": "mocha",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha --dir test/coverage",
     "coveralls": "npm install coveralls && cat ./test/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
@@ -46,9 +44,6 @@
   "devDependencies": {
     "mocha": "^1.19.0",
     "chai": "^1.9.1",
-    "istanbul": "^0.2.11",
-    "jshint": "^2.5.1",
-    "jshint-stylish": "^0.2.0",
-    "gulp": "^3.8.0"
+    "istanbul": "^0.2.11"
   }
 }
