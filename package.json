@@ -32,16 +32,16 @@
   },
   "homepage": "https://github.com/quentinrossetti/ruche",
   "dependencies": {
-    "rc": "^0.4.0",
-    "yargs": "^1.2.2",
-    "underscore": "^1.6.0",
     "colors": "^0.6.2",
     "debug": "^1.0.1",
     "humanize": "0.0.9",
-    "tar": "^0.1.19",
+    "jsdoc": "^3.3.0-alpha8",
+    "rc": "^0.4.0",
     "request": "^2.36.0",
     "rimraf": "^2.2.8",
-    "jsdoc": "^3.3.0-alpha8"
+    "tar": "^0.1.19",
+    "underscore": "^1.6.0",
+    "yargs": "^1.2.2"
   },
   "devDependencies": {
     "mocha": "^1.19.0",
