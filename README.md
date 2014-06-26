@@ -1,6 +1,7 @@
 [![ruche logo](https://raw.githubusercontent.com/quentinrossetti/ruche/master/doc/assets/ruche-logo.png)](https://github.com/quentinrossetti/ruche)
 
 [![Dependencies Status][gemnasium-image]][gemnasium-url] [![Build Status][travis-image]][travis-url] [![Code quality][codeclimate-image]][codeclimate-url] [![Code coverage][coveralls-image]][coveralls-url] [![Release][npm-image]][npm-url]
+[![Documentation][rtfd-image]][rtfd-url]
 
 > A developer-friendly Windows package manager
 
@@ -37,6 +38,10 @@ ruche.install(['git'], function (err, packages) {
 npm install --global ruche
 ```
 
+## Documentation
+
+Check the full documenation at [Read The Docs](http://ruche.readthedocs.org)
+
 You are now ready to go!
 
 [ruche-url]: https://github.com/quentinrossetti/ruche
@@ -53,3 +58,5 @@ You are now ready to go!
 [coveralls-image]: http://img.shields.io/coveralls/quentinrossetti/ruche.svg
 [npm-url]: https://www.npmjs.org/package/ruche
 [npm-image]: http://img.shields.io/npm/v/ruche.svg
+[rtfd-url]: https://readthedocs.org/projects/ruche/badge
+[rtfd-image]: http://img.shields.io/npm/v/ruche.svg
