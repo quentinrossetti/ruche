@@ -554,7 +554,7 @@ added:  ``~`` represents the home directory of the user (like:
 `C:/Users/MyProfile`). ``@`` represents the installation folder of the current
 **ruche** installation.
 
-.. js:function:: util.untilde(wanted, data)
+.. js:function:: util.untilde(path)
 
     :param string path: The string to parse.
     :returns: *(string)* – Return the resolved path.
