@@ -1,6 +1,8 @@
 Welcome to ruche's documentation!
 =================================
 
+.. image:: assets/ruche-logo.png
+
 **ruche** is a package manager for Windows. It's designed to help developers to
 implement a clean and portable development environment.
 
@@ -26,6 +28,6 @@ Developer Documentation
 -----------------------
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 2
 
     api
