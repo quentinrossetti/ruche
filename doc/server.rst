@@ -7,9 +7,9 @@ you need nothing more than a HTTP server that serve an directory statically.
 
 To build you own server you need to valid three things:
 
- * Filesystem Hierarchy
- * All the ``ruche.json`` files
- * Your archives
+* Filesystem Hierarchy
+* All the ``ruche.json`` files
+* Your archives
 
 Filesystem Hierarchy
 --------------------
@@ -88,11 +88,14 @@ The archives must be named as follow: ``package-version-platform.tar.gz``.
 
 .. note:: We recommend `7-Zip <http://www.7-zip.org/>`_ for building archives.
 
+.. image:: assets/tar-gzip.png
+   :align: right
+
 #. Put all your file in a folder named ``package-version-platform``.
 #. Use a software to `Tar <http://www.gnu.org/software/tar>`_ this
-    folder into a ``package-version-platform.tar`` file.
+   folder into a ``package-version-platform.tar`` file.
 #. Use a software to `Gzip <http://www.gnu.org/software/gzip>`_ this
-    file into a ``package-version-platform.tar.gz`` file.
+   file into a ``package-version-platform.tar.gz`` file.
 #. Put this file is the ``package/dist/`` folder of your server.
 
 Exemple:
@@ -103,7 +106,7 @@ Exemple:
   |  + dist/
   |  |  + curl-7.36.0-win32.tar.gz
   |  |  |  + curl-7.36.0-win32.tar
-  |  |  |  |  + curl-7.36.0-win32
-  |  |  |  |  |  + bin
+  |  |  |  |  + curl-7.36.0-win32/
+  |  |  |  |  |  + bin/
   |  |  |  |  |  |  + curl.exe
   ...

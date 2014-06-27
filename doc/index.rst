@@ -2,6 +2,7 @@ Welcome to ruche's documentation!
 =================================
 
 .. image:: assets/ruche-logo.png
+   :align: center
 
 **ruche** is a package manager for Windows. It's designed to help developers to
 implement a clean and portable development environment.
