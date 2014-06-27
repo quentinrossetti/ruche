@@ -9,5 +9,5 @@
 - [ ] write wiki for install, usage and packaging
 - [ ] autocomplete
 - [x] clean npm script `coveralls` and `.travis.yml`
-- [ ] spell checking
+- [x] spell checking
 - [ ] update command

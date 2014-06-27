@@ -31,3 +31,4 @@ Developer Documentation
     :maxdepth: 2
 
     api
+    server
