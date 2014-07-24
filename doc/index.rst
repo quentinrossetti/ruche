@@ -23,6 +23,8 @@ User Documentation
 .. toctree::
     :maxdepth: 2
 
+    install
+
 .. _developer-docs:
 
 Developer Documentation

@@ -2,6 +2,6 @@ Usage: ruche [options] uninstall <package[-version-platform]>
 
 Description:
 
-  Remove a package. For uninstalling serveral packages in one command split 
-  them with a space: ruche install curl 7zip. You also cant specify a 
+  Remove a package. For uninstalling serveral packages in one command split
+  them with a space: ruche install curl 7zip. You also cant specify a
   particular version and platform of a package: ruche install 7zip-9.20-win64

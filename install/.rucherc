@@ -1,0 +1,11 @@
+repository = http://ruche.io.free.fr
+
+[dir]
+
+share  = ~/.ruche/share
+path   = ~/.ruche/bin
+config = ~/.ruche/etc
+tmp    = ~/.ruche/tmp
+pid    = ~/.ruche/var/run
+www    = ~/.ruche/var/www
+db     = ~/.ruche/var/db

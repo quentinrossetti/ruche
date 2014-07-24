@@ -8,7 +8,7 @@ Commands:
 
   install <package>         install a new package
   uninstall <package>       remove a package
-  alternatives <package>    allow you to chose between versions of a same 
+  alternatives <package>    allow you to chose between versions of a same
                             sofware.
 
 Options:

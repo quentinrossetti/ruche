@@ -2,6 +2,7 @@
 .editorconfig
 .travis.yml
 .jshintrc
+.jshintignore
 CONTRIBUTING.md
 TODO.md
 test
