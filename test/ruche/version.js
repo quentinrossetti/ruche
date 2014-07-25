@@ -1,53 +1,27 @@
-// Module dependencies
-/* global describe, it, before, after, beforeEach, afterEach */
+/* global describe, it */
 'use strict';
-var debug   = require('debug')('ruche:test:ruche:version');
-var chai    = require('chai');
-var ruche   = require('../../lib/ruche');
-var fixture = require('../fixture');
+var chai  = require('chai');
+var ruche = require('../../lib/ruche');
 
 // Initialization and configuration
 var expect = chai.expect;
 
 /**
- * Test suite for ruche:version
+ * Unit tests for ruche:version
  */
 describe('ruche:version', function () {
 
-  before(function () {
-    debug('Test suite for ruche:version started');
-    fixture.env.before();
-  });
-  after(function () {
-    fixture.env.after();
-    debug('Test suite for ruche:version ended');
-  });
-
-  it('should send a valid version', function (done) {
-    ruche.version(function(err, data) {
-      expect(data).to.match(/^\d+.\d+.\d+$/);
+  it('should callback valid version number', function (done) {
+    var regexp = /^v\d.\d.\d$/;
+    var result;
+    ruche.version(function (err, version) {
+      result = regexp.test(version);
+      expect(result).to.eq(true);
       done();
     });
   });
 
-  it('should send a error when invalid JSON', function (done) {
-    fixture.error.packageInvalidBefore();
-    /*jshint unused:false */
-    ruche.version(function(err, data) {
-      expect(err.message).to.equal('Can\'t parse the ruche package.json file');
-      fixture.error.packageAfter();
-      done();
-    });
-  });
-
-  it('should send a error when unreachable package.json', function (done) {
-    fixture.error.packageUnreachableBefore();
-    /*jshint unused:false */
-    ruche.version(function(err, data) {
-      expect(err.message).to.equal('Can\'t read the ruche package.json file');
-      fixture.error.packageAfter();
-      done();
-    });
-  });
+  //TODO: should callback a 210 error when package.json file is missing
+  //TODO: should callback a 211 error when package.json file is corrupted
 
 });
