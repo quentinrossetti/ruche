@@ -1,3 +1,4 @@
 test/ruche
+test/ruche-util
 --reporter spec
 --recursive
