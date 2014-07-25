@@ -36,7 +36,6 @@ describe('ruche:version', function () {
     });
   });
 
-  //TODO: should callback a 211 error when package.json file is corrupted
   it('should callback an error if package.json is corrupted', function (done) {
     fixture.version.copyPackageJson();
     fixture.version.corruptPackageJson();
