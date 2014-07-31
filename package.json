@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node ./bin/ruche.js",
     "test": "mocha",
-    "coverage": "istanbul cover node_modules/mocha/bin/_mocha --dir test/coverage",
-    "coveralls": "npm install coveralls && cat ./test/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha --dir .tmp/coverage",
+    "coveralls": "npm install coveralls && cat ./.tmp/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "bin": {
     "ruche": "./bin/ruche.js",
@@ -23,7 +23,7 @@
     "package",
     "manager"
   ],
-  "author": "Quentin Rossetti <quentin.rossetti@gmail.com>",
+  "author": "Quentin Rossetti &lt;quentin.rossetti@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/quentinrossetti/ruche/issues"
@@ -38,6 +38,8 @@
     "rimraf": "^2.2.8",
     "tar": "^0.1.19",
     "underscore": "^1.6.0",
+    "untildify": "^0.1.0",
+    "version-sort": "^0.1.1",
     "yargs": "^1.2.2"
   },
   "devDependencies": {

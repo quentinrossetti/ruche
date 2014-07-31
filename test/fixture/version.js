@@ -31,7 +31,7 @@ module.exports.removePackageJson = function () {
 module.exports.corruptPackageJson = function () {
 
   var jsonOrigin  = path.resolve(__dirname, '../../package.json');
-  var jsonCorrupt = path.resolve(__dirname, 'package.corrupt.json');
+  var jsonCorrupt = path.resolve(__dirname, 'corrupt.json');
   fs.writeFileSync(jsonOrigin, fs.readFileSync(jsonCorrupt));
   return;
 

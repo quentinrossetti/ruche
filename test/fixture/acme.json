@@ -1,0 +1,33 @@
+[
+  {
+    "name": "acme",
+    "version": "0.0.1",
+    "platform": "linux32"
+  },
+  {
+    "name": "acme",
+    "version": "0.0.1",
+    "platform": "win64"
+  },
+  {
+    "name": "acme",
+    "version": "0.0.1",
+    "platform": "darwin64"
+  },
+  {
+    "name": "acme",
+    "version": "0.0.1",
+    "options": "alternative",
+    "platform": "linux32"
+  },
+  {
+    "name": "acme",
+    "version": "0.0.2beta",
+    "platform": "linux32"
+  },
+  {
+    "name": "acme",
+    "version": "0.0.2alpha",
+    "platform": "linux32"
+  }
+]

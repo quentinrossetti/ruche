@@ -1,8 +1,8 @@
 /* global describe, it, before, after */
 'use strict';
 var chai    = require('chai');
-var ruche   = require('../../lib/ruche');
 var fixture = require('../fixture');
+var ruche   = require('../../lib/ruche');
 
 // Initialization and configuration
 var expect = chai.expect;

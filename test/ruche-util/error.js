@@ -12,20 +12,20 @@ var expect = chai.expect;
 describe('ruche:util:error', function () {
 
   it('should return an friendly error', function () {
-    var error = u.error(210);
+    var error = new u.error(210);
     expect(error).to.have.deep.property('code');
     expect(error).to.have.deep.property('message');
     expect(error).to.have.deep.property('more');
   });
 
   it('should have a complete error when one is passed', function() {
-    var error = u.error(210, new Error('Test error'));
+    var error = new u.error(210, new Error('Test error'));
     expect(error).to.have.deep.property('origin.message');
     expect(error.origin.stack).to.be.an('array');
   });
 
   it('should send back an 100 error when unknown error', function () {
-    var error = u.error('do-not-exist');
+    var error = new u.error('do-not-exist');
     expect(error.code).to.eql(100);
   });
 

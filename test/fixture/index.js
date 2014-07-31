@@ -3,6 +3,9 @@
 module.exports = {
 
   env:     require('./env'),
-  version: require('./version')
+  version: require('./version'),
+  u: {
+    match: require('./util-match')
+  }
 
 };
