@@ -69,6 +69,25 @@ describe('ruche:util:format', function () {
     }
   });
 
+  it('should transform to long name', function () {
+    var r = u.format.long({
+      name: 'acme',
+      version: '0.0.1',
+      platform: 'linux32'
+    });
+    expect(r).to.eql('acme-0.0.1-linux32');
+  });
+
+  it('should transform to long name with options', function () {
+    var r = u.format.long({
+      name: 'acme',
+      version: '0.0.1',
+      options: 'ssh',
+      platform: 'linux32'
+    });
+    expect(r).to.eql('acme-0.0.1-ssh-linux32');
+  });
+
   it('should untilde', function () {
     var untilde = u.format.untildify(__dirname);
     expect(untilde).to.eql(require('path').resolve(__dirname));

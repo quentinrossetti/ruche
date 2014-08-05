@@ -2,6 +2,7 @@
 var fs     = require('fs');
 var path   = require('path');
 var rimraf = require('rimraf');
+var u      = require('../../lib/ruche/util');
 
 module.exports.before = function () {
 
@@ -45,5 +46,11 @@ module.exports.after = function () {
   if (fs.existsSync(testDir)) {
     rimraf.sync(testDir);
   }
+
+};
+
+module.exports.beforeEach = function () {
+
+  u.event.removeAllListeners();
 
 };

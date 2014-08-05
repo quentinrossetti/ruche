@@ -32,3 +32,18 @@ module.exports.restoreTmpDir = function () {
   fs.mkdirSync(process.rc.dir.tmp);
 };
 
+module.exports.createTask = function () {
+  return {
+    name: 'acme',
+    match: {
+      name: 'acme',
+      version: '0.0.1',
+      platform: 'linux32',
+      link: 'http://localhost:42753/acme/acme_0_0_1-mswinx64.zip'
+    }
+  };
+};
+
+module.exports.corruptTaskLink = function () {
+  process.tasks[0].match.link = 'http://???';
+};

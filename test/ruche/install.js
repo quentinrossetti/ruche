@@ -27,10 +27,4 @@ describe('ruche:install', function () {
     });
   });
 
-//  it('should get a list of tasks', function (done) {
-//    ruche.install([ 'acme', 'curl' ], function (err, tasks) {
-//      done();
-//    });
-//  });
-
 });

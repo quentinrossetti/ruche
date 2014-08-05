@@ -24,9 +24,9 @@ doc/_build
 node_modules
 
 ### App stuff ###
-.test
-.tmp
+.test/
+.tmp/
 
 ### Dummy stuff ###
 dummy.*
-.idea
+.idea/

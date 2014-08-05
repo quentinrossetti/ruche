@@ -1,4 +1,4 @@
-/* global describe, it, before, after */
+/* global describe, it, before, after, beforeEach */
 'use strict';
 var chai    = require('chai');
 var fixture = require('../../fixture');
@@ -19,6 +19,7 @@ describe('ruche:util:get', function () {
     });
   });
   after(function () { fixture.env.after(); });
+  beforeEach(function () { fixture.env.beforeEach(); });
 
   it('should get an error on unknown package', function (done) {
     u.get.json('???', function (err, cache) {
@@ -73,6 +74,63 @@ describe('ruche:util:get', function () {
       expect(err).to.eql(null);
       expect(cache).to.be.an('array');
       fixture.u.get.restoreRepository();
+      done();
+    });
+  });
+
+  it('should get an error on error task link', function (done) {
+    process.tasks[0] = fixture.u.get.createTask();
+    fixture.u.get.corruptTaskLink();
+    u.get.archive(0, function (err, filePath) {
+      expect(err.code).to.eql(110);
+      done();
+    });
+  });
+
+  it('should get an error on not found task link', function (done) {
+    process.tasks[0] = fixture.u.get.createTask();
+    process.tasks[0].match.link += '/404';
+    u.get.archive(0, function (err, filePath) {
+      expect(err.code).to.eql(111);
+      done();
+    });
+  });
+
+  it('should emit `dl-start`', function (done) {
+    var called = false;
+    process.tasks[0] = fixture.u.get.createTask();
+    u.event.on('dl-start', function (task_index, length) {
+      u.event.removeAllListeners();
+      called = true;
+    });
+    u.get.archive(0, function (err, filePath) {
+      expect(called).to.eql(true);
+      done();
+    });
+  });
+
+  it('should emit `dl-data`', function (done) {
+    var called = false;
+    process.tasks[0] = fixture.u.get.createTask();
+    u.event.on('dl-data', function (task_index, chunk_length) {
+      u.event.removeAllListeners();
+      called = true;
+    });
+    u.get.archive(0, function (err, filePath) {
+      expect(called).to.eql(true);
+      done();
+    });
+  });
+
+  it('should emit `dl-end`', function (done) {
+    var called = false;
+    process.tasks[0] = fixture.u.get.createTask();
+    u.event.on('dl-end', function (task_index) {
+      u.event.removeAllListeners();
+      called = true;
+    });
+    u.get.archive(0, function (err, filePath) {
+      expect(called).to.eql(true);
       done();
     });
   });
