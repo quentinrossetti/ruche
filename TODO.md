@@ -1,0 +1,2 @@
+ - Tasks:
+    - command (install/uninstall/update/alternative/config)

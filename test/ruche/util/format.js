@@ -1,7 +1,7 @@
 /* global describe, it */
 'use strict';
 var chai = require('chai');
-var u    = require('../../lib/ruche/util');
+var u    = require('../../../lib/ruche/util');
 
 // Initialization and configuration
 var expect = chai.expect;

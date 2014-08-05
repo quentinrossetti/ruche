@@ -33,6 +33,7 @@
     "colors": "^0.6.2",
     "debug": "^1.0.1",
     "humanize": "0.0.9",
+    "multimeter": "^0.1.1",
     "rc": "^0.4.0",
     "request": "^2.36.0",
     "rimraf": "^2.2.8",
@@ -43,8 +44,10 @@
     "yargs": "^1.2.2"
   },
   "devDependencies": {
-    "mocha": "^1.19.0",
     "chai": "^1.9.1",
-    "istanbul": "^0.2.11"
+    "connect": "^3.1.0",
+    "istanbul": "^0.2.11",
+    "mocha": "^1.19.0",
+    "serve-static": "^1.4.3"
   }
 }

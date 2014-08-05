@@ -6,9 +6,13 @@ var rimraf = require('rimraf');
 module.exports.before = function () {
 
   var testDir = path.resolve(__dirname, '../../.test');
+  // Delete previous test env
+  if (fs.existsSync(testDir)) {
+    rimraf.sync(testDir);
+  }
   fs.mkdirSync(testDir);
   var rc = {
-    repository: 'http://localhost:42001/',
+    repository: 'http://localhost:42753',
     dir       : {
       'bin'   : '/bin',
       'etc'   : '/etc',
@@ -30,15 +34,16 @@ module.exports.before = function () {
     rc.dir[key] = path.resolve(__dirname, '../../.test/' + rc.dir[key]);
     fs.mkdirSync(rc.dir[key]);
   });
-  process.rc = rc;
-  return;
-
+  process.rc    = rc;
+  process.test  = {};
+  process.tasks = [];
 };
 
 module.exports.after = function () {
 
   var testDir = path.resolve(__dirname, '../../.test');
-  rimraf.sync(testDir);
-  return;
+  if (fs.existsSync(testDir)) {
+    rimraf.sync(testDir);
+  }
 
 };

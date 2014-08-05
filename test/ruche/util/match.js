@@ -2,10 +2,8 @@
 'use strict';
 var _       = require('underscore');
 var chai    = require('chai');
-var fs      = require('fs');
-var path    = require('path');
-var fixture = require('../fixture');
-var u       = require('../../lib/ruche/util');
+var fixture = require('../../fixture');
+var u       = require('../../../lib/ruche/util');
 
 // Initialization and configuration
 var expect = chai.expect;
@@ -17,59 +15,6 @@ describe('ruche:util:match', function () {
 
   before(function () { fixture.env.before(); });
   after(function () { fixture.env.after(); });
-
-  it('should callback an error when no cache is not present', function (done) {
-    u.match.cache('acme', function (err, cache) {
-      /*jshint unused:false */
-      expect(err.code).to.eql(210);
-      done();
-    });
-  });
-
-  it('should callback an error when cache is invalid', function (done) {
-    fixture.u.match.createCorruptCache();
-    fixture.u.match.protectFromStaleCache();
-    u.match.cache('acme', function (err, cache) {
-      /*jshint unused:false */
-      expect(err.code).to.eql(211);
-      fixture.u.match.exposeFromStaleCache();
-      done();
-    });
-  });
-
-  it('should delete cache when invalid', function (done) {
-    fixture.u.match.createCorruptCache();
-    fixture.u.match.protectFromStaleCache();
-    u.match.cache('acme', function (err, cache) {
-      /*jshint unused:false */
-      var exists = fs.existsSync(path.resolve(process.rc.dir.tmp, 'acme.json'));
-      expect(exists).to.eql(false);
-      fixture.u.match.exposeFromStaleCache();
-      done();
-    });
-  });
-
-  it('should callback data when cache is present', function (done) {
-    fixture.u.match.createCache();
-    fixture.u.match.protectFromStaleCache();
-    u.match.cache('acme', function (err, cache) {
-      /*jshint unused:false */
-      expect(cache[0]).to.have.property('name');
-      expect(cache[0]).to.have.property('version');
-      expect(cache[0]).to.have.property('platform');
-      fixture.u.match.exposeFromStaleCache();
-      done();
-    });
-  });
-
-  it('should callback an error when cache is expired', function (done) {
-    fixture.u.match.createCache();
-    u.match.cache('acme', function (err, cache) {
-      /*jshint unused:false */
-      expect(err.code).to.eql(220);
-      done();
-    });
-  });
 
   it('should get a valid platform', function () {
     var r = u.match.platform();
