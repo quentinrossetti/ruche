@@ -5,7 +5,7 @@
   "main": "lib/ruche",
   "scripts": {
     "start": "node ./bin/ruche.js",
-    "test": "mocha",
+    "test": "7z",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha --dir .tmp/coverage",
     "coveralls": "npm install coveralls && cat ./.tmp/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
@@ -33,6 +33,7 @@
     "colors": "^0.6.2",
     "debug": "^1.0.1",
     "humanize": "0.0.9",
+    "mkdirp": "^0.5.0",
     "multimeter": "^0.1.1",
     "rc": "^0.4.0",
     "request": "^2.36.0",
