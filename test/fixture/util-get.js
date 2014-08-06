@@ -39,11 +39,11 @@ module.exports.createTask = function () {
       name: 'acme',
       version: '0.0.1',
       platform: 'linux32',
-      link: 'http://localhost:42753/acme/acme_0_0_1-mswinx64.zip'
+      link: 'http://localhost:42753/acme/acme-0.0.1-linux32.tar.gz'
     }
   };
 };
 
 module.exports.corruptTaskLink = function () {
-  process.tasks[0].match.link = 'http://???';
+  process.tasks[0].match.link = 'http://localhost:42753/error/arch.tar.gz';
 };

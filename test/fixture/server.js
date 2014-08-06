@@ -9,7 +9,7 @@ module.exports.serve = function (callback) {
   var app = connect();
   app.use(serveStatic('test/fixture/packages'));
   app.use(function(req, res, next) {
-    if (req.url === '/error/ruche.json') {
+    if (req.url === '/error/ruche.json' || req.url === '/error/arch.tar.gz') {
       res.statusCode = 500;
       res.end('Error');
     }
