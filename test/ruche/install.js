@@ -21,10 +21,29 @@ describe('ruche:install', function () {
   after(function () { fixture.env.after(); });
 
   it('should get an error unknown software', function (done) {
-    ruche.install([ '???' ], function (err, tasks) {
+    ruche.install([ '???' ], function (err) {
       expect(err.code).to.be.above(100);
       done();
     });
   });
+
+  it('should fail on invalid wish', function (done) {
+    process.platform = 'linux32';
+    ruche.install(['acme-57-linux32'], function (err) {
+      expect(err.code).to.eql(230);
+      done();
+    });
+  });
+
+  it('should complete the installation', function (done) {
+    process.platform = 'linux32';
+    ruche.install(['acme'], function (err) {
+      expect(err).to.eql(null);
+      done();
+    });
+  });
+
+  //TODO: Install a specific version
+  //TODO: Test with multiple wishes
 
 });

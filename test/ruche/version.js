@@ -14,6 +14,7 @@ describe('ruche:version', function () {
 
   before(function () { fixture.env.before(); });
   after(function () { fixture.env.after(); });
+  beforeEach(function () { fixture.env.beforeEach(); });
 
   it('should callback valid version number', function (done) {
     var regexp = /^v\d.\d.\d$/;

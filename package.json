@@ -23,22 +23,22 @@
     "package",
     "manager"
   ],
-  "author": "Quentin Rossetti &lt;quentin.rossetti@gmail.com>",
+  "author": "Quentin Rossetti <quentin.rossetti@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/quentinrossetti/ruche/issues"
   },
   "homepage": "https://github.com/quentinrossetti/ruche",
   "dependencies": {
+    "async": "^0.9.0",
     "colors": "^0.6.2",
-    "debug": "^1.0.1",
+    "fstream": "^1.0.1",
     "humanize": "0.0.9",
-    "mkdirp": "^0.5.0",
     "multimeter": "^0.1.1",
     "rc": "^0.4.0",
     "request": "^2.36.0",
     "rimraf": "^2.2.8",
-    "tar": "^0.1.19",
+    "tar": "^1.0.0",
     "underscore": "^1.6.0",
     "untildify": "^0.1.0",
     "unzip": "^0.1.9",

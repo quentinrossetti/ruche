@@ -1,2 +1,3 @@
  - Tasks:
     - command (install/uninstall/update/alternative/config)
+ - Clean empty dirs

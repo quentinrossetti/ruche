@@ -32,12 +32,13 @@ describe('ruche:util:match', function () {
     fixture.u.match.defaultProcessPlatform();
     var cache = fixture.u.match.getCacheStandard();
     var query = { name: 'acme' };
-    var r = u.match.find(query, cache);
+    var r = u.match.find(query, cache)[0];
     fixture.u.match.restoreProcessPlatform();
-    expect(r.length).to.eql(_.where(cache, {
+    expect(r).to.eql({
+      name: 'acme',
       platform: 'linux32',
-      options: undefined
-    }).length);
+      version: '0.0.2beta'
+    });
   });
 
   it('should match the specified version', function () {
@@ -51,6 +52,20 @@ describe('ruche:util:match', function () {
       options: undefined,
       version: '0.0.1'
     }).length);
+  });
+
+  it('should match the specified option', function () {
+    fixture.u.match.defaultProcessPlatform();
+    var cache = fixture.u.match.getCacheStandard();
+    var query = { name: 'acme', options: 'alternative' };
+    var r = u.match.find(query, cache)[0];
+    fixture.u.match.restoreProcessPlatform();
+    expect(r).to.eql({
+      name: 'acme',
+      platform: 'linux32',
+      options: 'alternative',
+      version: '0.0.1'
+    });
   });
 
   it('should throw an error when no match', function () {
