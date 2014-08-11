@@ -20,6 +20,7 @@ describe('ruche:update', function () {
     process.platform = 'linux32';
     ruche.update(['acme'], function (err) {
       expect(err.code).to.be.above(100);
+      done();
     });
   });
 
